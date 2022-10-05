@@ -3,7 +3,7 @@ platform :ios, '15.0'
 target 'MarvelExample' do
   use_frameworks!
 
-  # Pods for MarvelExample
+  pod 'Alamofire'
 
   target 'MarvelExampleTests' do
     inherit! :search_paths

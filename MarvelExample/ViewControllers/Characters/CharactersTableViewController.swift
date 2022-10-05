@@ -11,6 +11,8 @@ class CharactersTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        MarvelAPIClient().getCharacters()
     }
 
     // MARK: - Table view data source
