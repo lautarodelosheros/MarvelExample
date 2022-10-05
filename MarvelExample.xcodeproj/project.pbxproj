@@ -19,6 +19,7 @@
 		61DECAAB28EB7207008BE420 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECAAA28EB7207008BE420 /* MainTabBarController.swift */; };
 		61DECAAE28EB73AB008BE420 /* CharactersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECAAD28EB73AB008BE420 /* CharactersTableViewController.swift */; };
 		61DECAB028EB73B9008BE420 /* Characters.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61DECAAF28EB73B9008BE420 /* Characters.storyboard */; };
+		61DECAB328EE13C0008BE420 /* CharacterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECAB228EE13C0008BE420 /* CharacterTableViewCell.swift */; };
 		6504BD274B5CCBECAFD08ABA /* Pods_MarvelExample_MarvelExampleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0E094621707DB9B16DF98DC /* Pods_MarvelExample_MarvelExampleUITests.framework */; };
 		8C0F937FD35C988F015BD5A0 /* Pods_MarvelExampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3930AC11685F00D0CB06304 /* Pods_MarvelExampleTests.framework */; };
 		E7F4D453B038B651495BBA70 /* Pods_MarvelExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEDFE9728E695546471B04E6 /* Pods_MarvelExample.framework */; };
@@ -59,6 +60,7 @@
 		61DECAAA28EB7207008BE420 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		61DECAAD28EB73AB008BE420 /* CharactersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersTableViewController.swift; sourceTree = "<group>"; };
 		61DECAAF28EB73B9008BE420 /* Characters.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Characters.storyboard; sourceTree = "<group>"; };
+		61DECAB228EE13C0008BE420 /* CharacterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTableViewCell.swift; sourceTree = "<group>"; };
 		AE7554B639D7DFD70E45A610 /* Pods-MarvelExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelExample.release.xcconfig"; path = "Target Support Files/Pods-MarvelExample/Pods-MarvelExample.release.xcconfig"; sourceTree = "<group>"; };
 		B3930AC11685F00D0CB06304 /* Pods_MarvelExampleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MarvelExampleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D725681A2271BCA013B562CB /* Pods-MarvelExample-MarvelExampleUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelExample-MarvelExampleUITests.release.xcconfig"; path = "Target Support Files/Pods-MarvelExample-MarvelExampleUITests/Pods-MarvelExample-MarvelExampleUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -122,7 +124,8 @@
 		61DECA7528EB689B008BE420 /* MarvelExample */ = {
 			isa = PBXGroup;
 			children = (
-				61DECAA628EB6C8A008BE420 /* View */,
+				61DECAA728EB6CA0008BE420 /* ViewControllers */,
+				61DECAA628EB6C8A008BE420 /* Views */,
 				61DECA7628EB689B008BE420 /* AppDelegate.swift */,
 				61DECA7828EB689B008BE420 /* SceneDelegate.swift */,
 				61DECA7F28EB689C008BE420 /* Assets.xcassets */,
@@ -150,12 +153,12 @@
 			path = MarvelExampleUITests;
 			sourceTree = "<group>";
 		};
-		61DECAA628EB6C8A008BE420 /* View */ = {
+		61DECAA628EB6C8A008BE420 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				61DECAA728EB6CA0008BE420 /* ViewControllers */,
+				61DECAB128EE139E008BE420 /* Characters */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		61DECAA728EB6CA0008BE420 /* ViewControllers */ = {
@@ -189,6 +192,14 @@
 			children = (
 				61DECAAD28EB73AB008BE420 /* CharactersTableViewController.swift */,
 				61DECAAF28EB73B9008BE420 /* Characters.storyboard */,
+			);
+			path = Characters;
+			sourceTree = "<group>";
+		};
+		61DECAB128EE139E008BE420 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				61DECAB228EE13C0008BE420 /* CharacterTableViewCell.swift */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -425,6 +436,7 @@
 				61DECA7728EB689B008BE420 /* AppDelegate.swift in Sources */,
 				61DECAAB28EB7207008BE420 /* MainTabBarController.swift in Sources */,
 				61DECA7928EB689B008BE420 /* SceneDelegate.swift in Sources */,
+				61DECAB328EE13C0008BE420 /* CharacterTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
