@@ -12,7 +12,7 @@ class CharactersTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        MarvelAPIClient().getCharacters()
+        MarvelAPIClient().getCharacters(pageNumber: 0, pageSize: 15)
     }
 
     // MARK: - Table view data source

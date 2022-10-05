@@ -22,9 +22,10 @@ class MarvelAPIClient {
         baseUrl.append(queryItems: [apiKeyQueryItem, hashQueryItem, timestampQueryItem])
     }
     
-    func getCharacters() {
+    func getCharacters(pageNumber: Int, pageSize: Int) {
         let url = baseUrl.appendingPathComponent(MarvelEndpoints.public)
             .appendingPathComponent(MarvelEndpoints.characters)
+            .paginatedBy(pageNumber: pageNumber, pageSize: pageSize)
         Session.default.request(url).responseDecodable(of: MarvelResponse<Character>.self) { responseData in
             switch responseData.result {
             case .success(let response):
