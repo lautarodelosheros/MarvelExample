@@ -32,10 +32,8 @@ class MarvelAPIClient {
             onCompletion()
             switch responseData.result {
             case .success(let response):
-                debugPrint(response)
                 onSuccess(response.data.results)
             case .failure(let error):
-                debugPrint(error)
                 onFailure()
             }
         }

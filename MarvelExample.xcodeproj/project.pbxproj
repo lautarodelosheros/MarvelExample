@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		617A6CA928EF906300FEBC2B /* RemoteResourceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CA828EF906300FEBC2B /* RemoteResourceFile.swift */; };
+		617A6CAB28EF917300FEBC2B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CAA28EF917300FEBC2B /* UIImage+Extensions.swift */; };
 		61DECA7728EB689B008BE420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7628EB689B008BE420 /* AppDelegate.swift */; };
 		61DECA7928EB689B008BE420 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7828EB689B008BE420 /* SceneDelegate.swift */; };
 		61DECA7B28EB689B008BE420 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7A28EB689B008BE420 /* SplashViewController.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		16CC2DB93302B8BE09F38F70 /* Pods-MarvelExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelExampleTests.release.xcconfig"; path = "Target Support Files/Pods-MarvelExampleTests/Pods-MarvelExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		617A6CA828EF906300FEBC2B /* RemoteResourceFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteResourceFile.swift; sourceTree = "<group>"; };
+		617A6CAA28EF917300FEBC2B /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		61DECA7328EB689B008BE420 /* MarvelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DECA7628EB689B008BE420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DECA7828EB689B008BE420 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -234,6 +238,7 @@
 			children = (
 				61DECABA28EE19EA008BE420 /* Character.swift */,
 				61DECABC28EE1A26008BE420 /* MarvelResponse.swift */,
+				617A6CA828EF906300FEBC2B /* RemoteResourceFile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 			isa = PBXGroup;
 			children = (
 				61DECABF28EE1CE1008BE420 /* URL+Extensions.swift */,
+				617A6CAA28EF917300FEBC2B /* UIImage+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -520,7 +526,9 @@
 				61DECAC028EE1CE1008BE420 /* URL+Extensions.swift in Sources */,
 				61DECABB28EE19EA008BE420 /* Character.swift in Sources */,
 				61DECA7B28EB689B008BE420 /* SplashViewController.swift in Sources */,
+				617A6CAB28EF917300FEBC2B /* UIImage+Extensions.swift in Sources */,
 				61DECAB628EE14E0008BE420 /* MarvelAPIClient.swift in Sources */,
+				617A6CA928EF906300FEBC2B /* RemoteResourceFile.swift in Sources */,
 				61DECABD28EE1A26008BE420 /* MarvelResponse.swift in Sources */,
 				61DECAAE28EB73AB008BE420 /* CharactersTableViewController.swift in Sources */,
 				61DECAB828EE16D7008BE420 /* MarvelEndpoints.swift in Sources */,
