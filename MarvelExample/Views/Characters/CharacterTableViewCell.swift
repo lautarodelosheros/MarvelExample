@@ -24,19 +24,15 @@ class CharacterTableViewCell: UITableViewCell {
     }
     
     private func setCharacterImage(from character: Character) {
-        // TODO: Implement cache
         characterImageView.image = nil
-        guard let thumbnail = character.thumbnail,
-              let url = URL(string: "\(thumbnail.path).\(thumbnail.extension)")
-        else {
+        guard let thumbnail = character.thumbnail else {
             return
         }
-        DispatchQueue.global().async {
-            if let image = UIImage(from: url) {
-                DispatchQueue.main.async { [weak self] in
-                    self?.characterImageView.image = image
-                }
-            }
+        ImageProvider.shared.getImage(
+            path: thumbnail.path,
+            fileExtension: thumbnail.extension
+        ) { [weak self] image in
+            self?.characterImageView.image = image
         }
     }
 }
