@@ -9,7 +9,6 @@ import UIKit
 
 class CharacterTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var characterImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
