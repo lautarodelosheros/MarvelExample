@@ -86,6 +86,23 @@ class CharactersTableViewController: UITableViewController {
         }
     }
     
+    override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        let section = sections[indexPath.section]
+        switch section {
+        case .characters:
+            return indexPath
+        case .loadMore:
+            return nil
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let character = CharactersProvider.shared.data[indexPath.row]
+        let characterDetailViewController = CharacterDetailViewController(character: character)
+        characterDetailViewController.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(characterDetailViewController, animated: true)
+    }
+    
     private enum Section {
         case characters
         case loadMore

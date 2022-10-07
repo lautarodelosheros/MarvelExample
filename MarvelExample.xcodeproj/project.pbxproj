@@ -36,6 +36,8 @@
 		617A6CEA28EFBE5A00FEBC2B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CE928EFBE5A00FEBC2B /* EventTableViewCell.swift */; };
 		617A6CEC28EFD55100FEBC2B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CEB28EFD55100FEBC2B /* Event.swift */; };
 		617A6CEE28EFDB3800FEBC2B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CED28EFDB3800FEBC2B /* UIView+Extensions.swift */; };
+		617A6CF128EFDE5700FEBC2B /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CEF28EFDE5700FEBC2B /* CharacterDetailViewController.swift */; };
+		617A6CF228EFDE5700FEBC2B /* CharacterDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617A6CF028EFDE5700FEBC2B /* CharacterDetailViewController.xib */; };
 		61DECA7728EB689B008BE420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7628EB689B008BE420 /* AppDelegate.swift */; };
 		61DECA7928EB689B008BE420 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7828EB689B008BE420 /* SceneDelegate.swift */; };
 		61DECA7B28EB689B008BE420 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7A28EB689B008BE420 /* SplashViewController.swift */; };
@@ -110,6 +112,8 @@
 		617A6CE928EFBE5A00FEBC2B /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		617A6CEB28EFD55100FEBC2B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		617A6CED28EFDB3800FEBC2B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		617A6CEF28EFDE5700FEBC2B /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
+		617A6CF028EFDE5700FEBC2B /* CharacterDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterDetailViewController.xib; sourceTree = "<group>"; };
 		61DECA7328EB689B008BE420 /* MarvelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DECA7628EB689B008BE420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DECA7828EB689B008BE420 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -349,6 +353,8 @@
 			children = (
 				61DECAAD28EB73AB008BE420 /* CharactersTableViewController.swift */,
 				61DECAAF28EB73B9008BE420 /* Characters.storyboard */,
+				617A6CEF28EFDE5700FEBC2B /* CharacterDetailViewController.swift */,
+				617A6CF028EFDE5700FEBC2B /* CharacterDetailViewController.xib */,
 			);
 			path = Characters;
 			sourceTree = "<group>";
@@ -541,6 +547,7 @@
 				617A6CE728EFBC0200FEBC2B /* Events.storyboard in Resources */,
 				617A6CE228EFACA700FEBC2B /* LoadMoreTableViewCell.xib in Resources */,
 				617A6CC528EF9E3700FEBC2B /* Roboto-Bold.ttf in Resources */,
+				617A6CF228EFDE5700FEBC2B /* CharacterDetailViewController.xib in Resources */,
 				617A6CC028EF9E3700FEBC2B /* Roboto-Thin.ttf in Resources */,
 				617A6CC928EF9E3700FEBC2B /* Roboto-Light.ttf in Resources */,
 				617A6CBF28EF9E3700FEBC2B /* Roboto-ThinItalic.ttf in Resources */,
@@ -695,6 +702,7 @@
 				61DECAB628EE14E0008BE420 /* MarvelAPIClient.swift in Sources */,
 				617A6CAD28EF967400FEBC2B /* ImageProvider.swift in Sources */,
 				617A6CA928EF906300FEBC2B /* RemoteResourceFile.swift in Sources */,
+				617A6CF128EFDE5700FEBC2B /* CharacterDetailViewController.swift in Sources */,
 				61DECABD28EE1A26008BE420 /* MarvelResponse.swift in Sources */,
 				61DECAAE28EB73AB008BE420 /* CharactersTableViewController.swift in Sources */,
 				617A6CEA28EFBE5A00FEBC2B /* EventTableViewCell.swift in Sources */,
