@@ -16,6 +16,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventDetailViewController" customModule="MarvelExample" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="mg0-eI-3l9" id="qPo-5Y-dv6"/>
+                <outlet property="comicsTitleLabel" destination="pmb-CJ-kck" id="HlY-AM-GeV"/>
                 <outlet property="comicsView" destination="tGu-nK-tG2" id="DaT-Q7-bM6"/>
                 <outlet property="comicsViewHeightConstraint" destination="Dn2-3h-hGx" id="dsn-cr-Ifs"/>
                 <outlet property="eventCellView" destination="QNn-Fe-va1" id="t7M-3h-ilY"/>
@@ -49,8 +50,8 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QNn-Fe-va1" customClass="EventCellView" customModule="MarvelExample" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
                                 </view>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMICS TO DISCUSS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmb-CJ-kck">
-                                    <rect key="frame" x="104.00000000000001" y="132" width="166.33333333333337" height="23.666666666666657"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="255" verticalHuggingPriority="251" text="COMICS TO DISCUSS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmb-CJ-kck">
+                                    <rect key="frame" x="84.666666666666671" y="132" width="204.66666666666663" height="23.666666666666657"/>
                                     <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="20"/>
                                     <color key="textColor" name="PrimaryText"/>
                                     <nil key="highlightedColor"/>
@@ -63,7 +64,7 @@
                                     </constraints>
                                 </view>
                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="mg0-eI-3l9">
-                                    <rect key="frame" x="280.33333333333331" y="134" width="20" height="20"/>
+                                    <rect key="frame" x="299.33333333333331" y="134" width="20" height="20"/>
                                     <color key="color" name="PrimaryText"/>
                                 </activityIndicatorView>
                             </subviews>

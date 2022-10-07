@@ -19,6 +19,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="MarvelExample" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="5W4-sy-G1r" id="pjg-fX-JNC"/>
+                <outlet property="comicsTitleLabel" destination="dN5-gh-LHe" id="fGG-eP-SnG"/>
                 <outlet property="comicsView" destination="5Tg-gL-ATI" id="F3d-h0-ZV4"/>
                 <outlet property="comicsViewHeightConstraint" destination="dwC-Hy-XRN" id="BXL-Qb-hq9"/>
                 <outlet property="descriptionLabel" destination="8fV-Db-LPa" id="ycw-YD-fSC"/>

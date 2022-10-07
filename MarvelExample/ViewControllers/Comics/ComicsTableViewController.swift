@@ -11,7 +11,7 @@ class ComicsTableViewController: UITableViewController {
 
     private var comics = [Comic]() {
         didSet {
-            delegate?.didUpdateComics()
+            delegate?.didUpdateComics(isEmpty: comics.isEmpty)
             guard isViewLoaded else { return }
             DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
@@ -68,5 +68,5 @@ class ComicsTableViewController: UITableViewController {
 protocol ComicsTableViewControllerDelegate: AnyObject {
     
     func didUpdateContentHeight(newValue: CGFloat)
-    func didUpdateComics()
+    func didUpdateComics(isEmpty: Bool)
 }

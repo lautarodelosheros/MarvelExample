@@ -12,6 +12,7 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var comicsTitleLabel: UILabel!
     @IBOutlet weak var comicsView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var comicsViewHeightConstraint: NSLayoutConstraint!
@@ -110,7 +111,8 @@ extension CharacterDetailViewController: ComicsTableViewControllerDelegate {
         }
     }
     
-    func didUpdateComics() {
+    func didUpdateComics(isEmpty: Bool) {
+        comicsTitleLabel.isHidden = isEmpty
         activityIndicator.isHidden = true
         activityIndicator.stopAnimating()
     }

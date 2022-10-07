@@ -12,6 +12,7 @@ class EventDetailViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var eventCellView: EventCellView!
     @IBOutlet weak var frameView: UIView!
+    @IBOutlet weak var comicsTitleLabel: UILabel!
     @IBOutlet weak var comicsView: UIView!
     @IBOutlet weak var comicsViewHeightConstraint: NSLayoutConstraint!
     
@@ -66,7 +67,8 @@ extension EventDetailViewController: ComicsTableViewControllerDelegate {
         }
     }
     
-    func didUpdateComics() {
+    func didUpdateComics(isEmpty: Bool) {
+        comicsTitleLabel.isHidden = isEmpty
         activityIndicator.isHidden = true
         activityIndicator.stopAnimating()
     }
