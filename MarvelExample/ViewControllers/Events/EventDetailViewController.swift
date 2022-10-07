@@ -10,6 +10,7 @@ import UIKit
 class EventDetailViewController: UIViewController {
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var eventCellView: EventCellView!
     @IBOutlet weak var frameView: UIView!
     @IBOutlet weak var comicsView: UIView!
     @IBOutlet weak var comicsViewHeightConstraint: NSLayoutConstraint!
@@ -30,6 +31,7 @@ class EventDetailViewController: UIViewController {
         activityIndicator.startAnimating()
         setUpFrameView()
         setUpComicsTableViewController()
+        eventCellView.bind(with: event)
     }
     
     private func setUpFrameView() {

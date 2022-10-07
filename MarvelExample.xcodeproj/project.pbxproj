@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6169DD7B28F089EF0079905C /* EventCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6169DD7A28F089EF0079905C /* EventCellView.swift */; };
+		6169DD7D28F089FD0079905C /* EventCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6169DD7C28F089FD0079905C /* EventCellView.xib */; };
 		617A6CA928EF906300FEBC2B /* RemoteResourceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CA828EF906300FEBC2B /* RemoteResourceFile.swift */; };
 		617A6CAB28EF917300FEBC2B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CAA28EF917300FEBC2B /* UIImage+Extensions.swift */; };
 		617A6CAD28EF967400FEBC2B /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CAC28EF967400FEBC2B /* ImageProvider.swift */; };
@@ -87,6 +89,8 @@
 
 /* Begin PBXFileReference section */
 		16CC2DB93302B8BE09F38F70 /* Pods-MarvelExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelExampleTests.release.xcconfig"; path = "Target Support Files/Pods-MarvelExampleTests/Pods-MarvelExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		6169DD7A28F089EF0079905C /* EventCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellView.swift; sourceTree = "<group>"; };
+		6169DD7C28F089FD0079905C /* EventCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCellView.xib; sourceTree = "<group>"; };
 		617A6CA828EF906300FEBC2B /* RemoteResourceFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteResourceFile.swift; sourceTree = "<group>"; };
 		617A6CAA28EF917300FEBC2B /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		617A6CAC28EF967400FEBC2B /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 			isa = PBXGroup;
 			children = (
 				617A6CE928EFBE5A00FEBC2B /* EventTableViewCell.swift */,
+				6169DD7A28F089EF0079905C /* EventCellView.swift */,
+				6169DD7C28F089FD0079905C /* EventCellView.xib */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -596,6 +602,7 @@
 				617A6CD528EFA0C800FEBC2B /* RobotoCondensed-Bold.ttf in Resources */,
 				617A6CBE28EF9E3700FEBC2B /* Roboto-Italic.ttf in Resources */,
 				617A6CC328EF9E3700FEBC2B /* Roboto-Black.ttf in Resources */,
+				6169DD7D28F089FD0079905C /* EventCellView.xib in Resources */,
 				61AA120A28F080DF004AAA7D /* EventDetailViewController.xib in Resources */,
 				617A6CCA28EF9E3700FEBC2B /* Roboto-Regular.ttf in Resources */,
 				61DECA8028EB689C008BE420 /* Assets.xcassets in Resources */,
@@ -746,6 +753,7 @@
 				61AA120928F080DF004AAA7D /* EventDetailViewController.swift in Sources */,
 				617A6CEA28EFBE5A00FEBC2B /* EventTableViewCell.swift in Sources */,
 				61AA120628F077E6004AAA7D /* Comic.swift in Sources */,
+				6169DD7B28F089EF0079905C /* EventCellView.swift in Sources */,
 				61DECAB828EE16D7008BE420 /* MarvelEndpoints.swift in Sources */,
 				61DECA7728EB689B008BE420 /* AppDelegate.swift in Sources */,
 				61DECAAB28EB7207008BE420 /* MainTabBarController.swift in Sources */,

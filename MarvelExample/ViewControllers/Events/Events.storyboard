@@ -4,16 +4,9 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Roboto-Regular.ttf">
-            <string>Roboto-Regular</string>
-        </array>
-        <array key="RobotoCondensed-Regular.ttf">
-            <string>RobotoCondensed-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Marvel Challenge-->
         <scene sceneID="BYx-v9-MHF">
@@ -25,63 +18,40 @@
                         <color key="backgroundColor" name="MainBackground"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="fvo-ev-a0Q" customClass="EventTableViewCell" customModule="MarvelExample" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="50" width="390" height="128"/>
+                                <rect key="frame" x="0.0" y="50" width="390" height="8"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fvo-ev-a0Q" id="ANN-Rf-x9t">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="8"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gut-wC-5P5">
-                                            <rect key="frame" x="8" y="4" width="374" height="120"/>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x87-hO-xJL">
+                                            <rect key="frame" x="8" y="4" width="374" height="0.0"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="elm-mx-n16">
-                                                    <rect key="frame" x="17" y="17" width="86" height="86"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="elm-mx-n16" secondAttribute="height" multiplier="1:1" id="K8z-VN-xcW"/>
-                                                        <constraint firstAttribute="height" constant="86" id="wpd-hX-Hrt"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2A9-97-wC0">
-                                                    <rect key="frame" x="136" y="14.999999999999998" width="205" height="28.333333333333329"/>
-                                                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="24"/>
-                                                    <color key="textColor" name="PrimaryText"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="756" text="2 de Octubre 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-Wx-Xjz">
-                                                    <rect key="frame" x="136" y="51.333333333333336" width="205" height="16.666666666666664"/>
-                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
-                                                    <color key="textColor" name="SecondaryText"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bia-7Q-HRw" customClass="EventCellView" customModule="MarvelExample" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                             <constraints>
-                                                <constraint firstItem="elm-mx-n16" firstAttribute="leading" secondItem="Gut-wC-5P5" secondAttribute="leading" constant="17" id="1GP-8U-4EV"/>
-                                                <constraint firstItem="2A9-97-wC0" firstAttribute="top" secondItem="Gut-wC-5P5" secondAttribute="top" constant="15" id="Hzg-8d-vO1"/>
-                                                <constraint firstItem="rFC-Wx-Xjz" firstAttribute="leading" secondItem="2A9-97-wC0" secondAttribute="leading" id="VVy-pK-GMy"/>
-                                                <constraint firstAttribute="trailing" secondItem="2A9-97-wC0" secondAttribute="trailing" constant="33" id="WMv-or-xGc"/>
-                                                <constraint firstItem="elm-mx-n16" firstAttribute="top" secondItem="Gut-wC-5P5" secondAttribute="top" constant="17" id="Zm4-ZT-qtO"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rFC-Wx-Xjz" secondAttribute="bottom" constant="15" id="dxe-Wb-yFb"/>
-                                                <constraint firstItem="rFC-Wx-Xjz" firstAttribute="top" secondItem="2A9-97-wC0" secondAttribute="bottom" constant="8" id="jXT-eX-QO5"/>
-                                                <constraint firstItem="2A9-97-wC0" firstAttribute="leading" secondItem="elm-mx-n16" secondAttribute="trailing" constant="33" id="loi-ox-2mN"/>
-                                                <constraint firstAttribute="bottom" secondItem="elm-mx-n16" secondAttribute="bottom" constant="17" id="vyg-Il-FXy"/>
-                                                <constraint firstItem="rFC-Wx-Xjz" firstAttribute="trailing" secondItem="2A9-97-wC0" secondAttribute="trailing" id="zaL-ns-jc1"/>
+                                                <constraint firstAttribute="bottom" secondItem="bia-7Q-HRw" secondAttribute="bottom" id="GTO-9E-cBq"/>
+                                                <constraint firstAttribute="trailing" secondItem="bia-7Q-HRw" secondAttribute="trailing" id="ZA3-LY-Wnk"/>
+                                                <constraint firstItem="bia-7Q-HRw" firstAttribute="leading" secondItem="x87-hO-xJL" secondAttribute="leading" id="dFq-Ck-czx"/>
+                                                <constraint firstItem="bia-7Q-HRw" firstAttribute="top" secondItem="x87-hO-xJL" secondAttribute="top" id="iDD-8f-1bb"/>
                                             </constraints>
                                         </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="Gut-wC-5P5" secondAttribute="trailing" constant="8" id="43t-YS-39h"/>
-                                        <constraint firstItem="Gut-wC-5P5" firstAttribute="top" secondItem="ANN-Rf-x9t" secondAttribute="top" constant="4" id="B1h-TW-qPd"/>
-                                        <constraint firstItem="Gut-wC-5P5" firstAttribute="leading" secondItem="ANN-Rf-x9t" secondAttribute="leading" constant="8" id="dV9-fx-6sL"/>
-                                        <constraint firstAttribute="bottom" secondItem="Gut-wC-5P5" secondAttribute="bottom" constant="4" id="zCD-tH-K2B"/>
+                                        <constraint firstAttribute="trailing" secondItem="x87-hO-xJL" secondAttribute="trailing" constant="8" id="Bg6-r5-H0j"/>
+                                        <constraint firstItem="x87-hO-xJL" firstAttribute="top" secondItem="ANN-Rf-x9t" secondAttribute="top" constant="4" id="Izd-0K-Gew"/>
+                                        <constraint firstItem="x87-hO-xJL" firstAttribute="leading" secondItem="ANN-Rf-x9t" secondAttribute="leading" constant="8" id="YC5-8m-3Ei"/>
+                                        <constraint firstAttribute="bottom" secondItem="x87-hO-xJL" secondAttribute="bottom" constant="4" id="p6p-rt-miF"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="cardView" destination="Gut-wC-5P5" id="dal-sH-fCe"/>
-                                    <outlet property="eventDateLabel" destination="rFC-Wx-Xjz" id="NQT-rI-F68"/>
-                                    <outlet property="eventImageView" destination="elm-mx-n16" id="wXJ-7S-kRU"/>
-                                    <outlet property="eventTitleLabel" destination="2A9-97-wC0" id="KLi-XK-F5o"/>
+                                    <outlet property="cardView" destination="x87-hO-xJL" id="8dp-Y2-gZf"/>
+                                    <outlet property="eventCellView" destination="bia-7Q-HRw" id="kI7-De-4Hp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -119,11 +89,8 @@
         <namedColor name="MainBackground">
             <color red="0.92500001192092896" green="0.93699997663497925" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <namedColor name="PrimaryText">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="SecondaryText">
-            <color red="0.13300000131130219" green="0.125" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
