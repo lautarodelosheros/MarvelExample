@@ -11,16 +11,31 @@ class EventsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        getEvents()
+    }
+    
+    private func getEvents() {
+        EventsProvider.shared.getData {
+            
+        } onSuccess: {
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        } onFailure: {
+            // TODO: Show error message
+        }
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 25
+        EventsProvider.shared.data.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! EventTableViewCell
+        let event = EventsProvider.shared.data[indexPath.row]
+        cell.bind(with: event)
         return cell
     }
 
@@ -33,5 +48,4 @@ class EventsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

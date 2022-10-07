@@ -34,6 +34,8 @@
 		617A6CE528EFBBF800FEBC2B /* EventsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CE428EFBBF800FEBC2B /* EventsTableViewController.swift */; };
 		617A6CE728EFBC0200FEBC2B /* Events.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 617A6CE628EFBC0200FEBC2B /* Events.storyboard */; };
 		617A6CEA28EFBE5A00FEBC2B /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CE928EFBE5A00FEBC2B /* EventTableViewCell.swift */; };
+		617A6CEC28EFD55100FEBC2B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CEB28EFD55100FEBC2B /* Event.swift */; };
+		617A6CEE28EFDB3800FEBC2B /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CED28EFDB3800FEBC2B /* UIView+Extensions.swift */; };
 		61DECA7728EB689B008BE420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7628EB689B008BE420 /* AppDelegate.swift */; };
 		61DECA7928EB689B008BE420 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7828EB689B008BE420 /* SceneDelegate.swift */; };
 		61DECA7B28EB689B008BE420 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7A28EB689B008BE420 /* SplashViewController.swift */; };
@@ -106,6 +108,8 @@
 		617A6CE428EFBBF800FEBC2B /* EventsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsTableViewController.swift; sourceTree = "<group>"; };
 		617A6CE628EFBC0200FEBC2B /* Events.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Events.storyboard; sourceTree = "<group>"; };
 		617A6CE928EFBE5A00FEBC2B /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		617A6CEB28EFD55100FEBC2B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		617A6CED28EFDB3800FEBC2B /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		61DECA7328EB689B008BE420 /* MarvelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DECA7628EB689B008BE420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DECA7828EB689B008BE420 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -371,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				61DECABA28EE19EA008BE420 /* Character.swift */,
+				617A6CEB28EFD55100FEBC2B /* Event.swift */,
 				61DECABC28EE1A26008BE420 /* MarvelResponse.swift */,
 				617A6CA828EF906300FEBC2B /* RemoteResourceFile.swift */,
 			);
@@ -382,6 +387,7 @@
 			children = (
 				61DECABF28EE1CE1008BE420 /* URL+Extensions.swift */,
 				617A6CAA28EF917300FEBC2B /* UIImage+Extensions.swift */,
+				617A6CED28EFDB3800FEBC2B /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -678,10 +684,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				617A6CEE28EFDB3800FEBC2B /* UIView+Extensions.swift in Sources */,
 				61DECAC028EE1CE1008BE420 /* URL+Extensions.swift in Sources */,
 				61DECABB28EE19EA008BE420 /* Character.swift in Sources */,
 				617A6CE528EFBBF800FEBC2B /* EventsTableViewController.swift in Sources */,
 				617A6CDD28EFA64600FEBC2B /* MainNavigationController.swift in Sources */,
+				617A6CEC28EFD55100FEBC2B /* Event.swift in Sources */,
 				61DECA7B28EB689B008BE420 /* SplashViewController.swift in Sources */,
 				617A6CAB28EF917300FEBC2B /* UIImage+Extensions.swift in Sources */,
 				61DECAB628EE14E0008BE420 /* MarvelAPIClient.swift in Sources */,

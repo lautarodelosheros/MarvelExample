@@ -82,3 +82,29 @@ class CharactersProvider: DataProvider<Character> {
     }
 }
 
+// MARK: - EventsProvider
+class EventsProvider: DataProvider<Event> {
+    
+    static let shared = EventsProvider()
+    
+    private init() {
+        super.init(pageSize: 25)
+    }
+    
+    override fileprivate func fetchData(onCompletion: @escaping () -> Void, onSuccess: @escaping () -> Void, onFailure: @escaping () -> Void) {
+        super.fetchData(onCompletion: onCompletion, onSuccess: onSuccess, onFailure: onFailure)
+        MarvelAPIClient.default.getEvents(pageNumber: currentPage, pageSize: pageSize) {
+            onCompletion()
+            self.isFetchingFromServer = false
+        } onSuccess: { events in
+            self.addData(events)
+            if events.count != self.pageSize {
+                self.noMoreData = true
+            }
+            self.currentPage += 1
+            onSuccess()
+        } onFailure: {
+            onFailure()
+        }
+    }
+}

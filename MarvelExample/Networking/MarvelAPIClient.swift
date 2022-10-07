@@ -38,4 +38,19 @@ class MarvelAPIClient {
             }
         }
     }
+    
+    func getEvents(pageNumber: Int, pageSize: Int, onCompletion: @escaping () -> Void, onSuccess: @escaping ([Event]) -> Void, onFailure: @escaping () -> Void) {
+        let url = baseUrl.appendingPathComponent(MarvelEndpoints.public)
+            .appendingPathComponent(MarvelEndpoints.events)
+            .paginatedBy(pageNumber: pageNumber, pageSize: pageSize)
+        Session.default.request(url).responseDecodable(of: MarvelResponse<Event>.self) { responseData in
+            onCompletion()
+            switch responseData.result {
+            case .success(let response):
+                onSuccess(response.data.results)
+            case .failure(let error):
+                onFailure()
+            }
+        }
+    }
 }
