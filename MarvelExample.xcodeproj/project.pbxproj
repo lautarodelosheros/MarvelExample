@@ -42,6 +42,8 @@
 		61AA120128F075E0004AAA7D /* Comics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61AA120028F075E0004AAA7D /* Comics.storyboard */; };
 		61AA120428F07766004AAA7D /* ComicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA120328F07766004AAA7D /* ComicTableViewCell.swift */; };
 		61AA120628F077E6004AAA7D /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA120528F077E6004AAA7D /* Comic.swift */; };
+		61AA120928F080DF004AAA7D /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA120728F080DF004AAA7D /* EventDetailViewController.swift */; };
+		61AA120A28F080DF004AAA7D /* EventDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 61AA120828F080DF004AAA7D /* EventDetailViewController.xib */; };
 		61DECA7728EB689B008BE420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7628EB689B008BE420 /* AppDelegate.swift */; };
 		61DECA7928EB689B008BE420 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7828EB689B008BE420 /* SceneDelegate.swift */; };
 		61DECA7B28EB689B008BE420 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7A28EB689B008BE420 /* SplashViewController.swift */; };
@@ -122,6 +124,8 @@
 		61AA120028F075E0004AAA7D /* Comics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Comics.storyboard; sourceTree = "<group>"; };
 		61AA120328F07766004AAA7D /* ComicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTableViewCell.swift; sourceTree = "<group>"; };
 		61AA120528F077E6004AAA7D /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
+		61AA120728F080DF004AAA7D /* EventDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
+		61AA120828F080DF004AAA7D /* EventDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDetailViewController.xib; sourceTree = "<group>"; };
 		61DECA7328EB689B008BE420 /* MarvelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DECA7628EB689B008BE420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DECA7828EB689B008BE420 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 			children = (
 				617A6CE428EFBBF800FEBC2B /* EventsTableViewController.swift */,
 				617A6CE628EFBC0200FEBC2B /* Events.storyboard */,
+				61AA120728F080DF004AAA7D /* EventDetailViewController.swift */,
+				61AA120828F080DF004AAA7D /* EventDetailViewController.xib */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -590,6 +596,7 @@
 				617A6CD528EFA0C800FEBC2B /* RobotoCondensed-Bold.ttf in Resources */,
 				617A6CBE28EF9E3700FEBC2B /* Roboto-Italic.ttf in Resources */,
 				617A6CC328EF9E3700FEBC2B /* Roboto-Black.ttf in Resources */,
+				61AA120A28F080DF004AAA7D /* EventDetailViewController.xib in Resources */,
 				617A6CCA28EF9E3700FEBC2B /* Roboto-Regular.ttf in Resources */,
 				61DECA8028EB689C008BE420 /* Assets.xcassets in Resources */,
 				61DECA7E28EB689B008BE420 /* Splash.storyboard in Resources */,
@@ -736,6 +743,7 @@
 				617A6CF128EFDE5700FEBC2B /* CharacterDetailViewController.swift in Sources */,
 				61DECABD28EE1A26008BE420 /* MarvelResponse.swift in Sources */,
 				61DECAAE28EB73AB008BE420 /* CharactersTableViewController.swift in Sources */,
+				61AA120928F080DF004AAA7D /* EventDetailViewController.swift in Sources */,
 				617A6CEA28EFBE5A00FEBC2B /* EventTableViewCell.swift in Sources */,
 				61AA120628F077E6004AAA7D /* Comic.swift in Sources */,
 				61DECAB828EE16D7008BE420 /* MarvelEndpoints.swift in Sources */,

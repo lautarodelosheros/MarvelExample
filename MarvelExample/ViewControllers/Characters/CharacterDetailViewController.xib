@@ -18,6 +18,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharacterDetailViewController" customModule="MarvelExample" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicator" destination="5W4-sy-G1r" id="pjg-fX-JNC"/>
                 <outlet property="comicsView" destination="5Tg-gL-ATI" id="F3d-h0-ZV4"/>
                 <outlet property="comicsViewHeightConstraint" destination="dwC-Hy-XRN" id="BXL-Qb-hq9"/>
                 <outlet property="descriptionLabel" destination="8fV-Db-LPa" id="ycw-YD-fSC"/>
@@ -46,7 +47,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APPEARS IN THESE COMICS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dN5-gh-LHe">
-                            <rect key="frame" x="20" y="470.66666666666663" width="350" height="23.666666666666686"/>
+                            <rect key="frame" x="82.333333333333329" y="470.66666666666663" width="225.33333333333337" height="23.666666666666686"/>
                             <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="20"/>
                             <color key="textColor" name="PrimaryText"/>
                             <nil key="highlightedColor"/>
@@ -57,9 +58,14 @@
                                 <constraint firstAttribute="height" constant="400" id="dwC-Hy-XRN"/>
                             </constraints>
                         </view>
+                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="5W4-sy-G1r">
+                            <rect key="frame" x="317.66666666666669" y="472.66666666666663" width="20" height="20"/>
+                            <color key="color" name="PrimaryText"/>
+                        </activityIndicatorView>
                     </subviews>
                     <constraints>
                         <constraint firstItem="5Tg-gL-ATI" firstAttribute="trailing" secondItem="0yJ-7J-SoK" secondAttribute="trailing" id="0Mx-Yt-Ra4"/>
+                        <constraint firstItem="5W4-sy-G1r" firstAttribute="centerY" secondItem="dN5-gh-LHe" secondAttribute="centerY" id="FB5-BG-S34"/>
                         <constraint firstItem="dN5-gh-LHe" firstAttribute="top" secondItem="8fV-Db-LPa" secondAttribute="bottom" constant="43" id="Vcr-NI-F50"/>
                         <constraint firstItem="dN5-gh-LHe" firstAttribute="centerX" secondItem="QFG-yI-RpI" secondAttribute="centerX" id="WOC-hM-nhY"/>
                         <constraint firstItem="5Tg-gL-ATI" firstAttribute="leading" secondItem="0yJ-7J-SoK" secondAttribute="leading" id="WWN-uP-f2j"/>
@@ -68,8 +74,10 @@
                         <constraint firstItem="8fV-Db-LPa" firstAttribute="leading" secondItem="0yJ-7J-SoK" secondAttribute="leading" constant="53" id="Xer-Rz-wdw"/>
                         <constraint firstItem="5Tg-gL-ATI" firstAttribute="bottom" secondItem="0yJ-7J-SoK" secondAttribute="bottom" id="aEn-Oy-WzC"/>
                         <constraint firstItem="QFO-l3-INj" firstAttribute="leading" secondItem="0yJ-7J-SoK" secondAttribute="leading" id="iRv-N4-GL9"/>
+                        <constraint firstItem="0yJ-7J-SoK" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5W4-sy-G1r" secondAttribute="trailing" constant="10" id="jn8-qZ-3Ar"/>
+                        <constraint firstItem="5W4-sy-G1r" firstAttribute="leading" secondItem="dN5-gh-LHe" secondAttribute="trailing" constant="10" id="nsu-RP-0h8"/>
                         <constraint firstItem="QFO-l3-INj" firstAttribute="centerX" secondItem="QFG-yI-RpI" secondAttribute="centerX" id="o4S-Ms-noG"/>
-                        <constraint firstItem="dN5-gh-LHe" firstAttribute="leading" secondItem="0yJ-7J-SoK" secondAttribute="leading" constant="20" id="opK-b8-SgO"/>
+                        <constraint firstItem="dN5-gh-LHe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0yJ-7J-SoK" secondAttribute="leading" constant="20" id="opK-b8-SgO"/>
                         <constraint firstItem="QFO-l3-INj" firstAttribute="trailing" secondItem="0yJ-7J-SoK" secondAttribute="trailing" id="tCP-zx-52t"/>
                         <constraint firstItem="5Tg-gL-ATI" firstAttribute="top" secondItem="dN5-gh-LHe" secondAttribute="bottom" constant="14" id="ubR-qe-HsI"/>
                         <constraint firstItem="QFO-l3-INj" firstAttribute="top" secondItem="0yJ-7J-SoK" secondAttribute="top" id="yhx-9o-Y63"/>

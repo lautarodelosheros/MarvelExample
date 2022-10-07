@@ -9,6 +9,7 @@ import UIKit
 
 class CharacterDetailViewController: UIViewController {
 
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var comicsView: UIView!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -27,6 +28,7 @@ class CharacterDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicator.startAnimating()
         setUpNavigationItem()
         setUpComicsTableViewController()
         reloadData()
@@ -89,5 +91,10 @@ extension CharacterDetailViewController: ComicsTableViewControllerDelegate {
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
         }
+    }
+    
+    func didUpdateComics() {
+        activityIndicator.isHidden = true
+        activityIndicator.stopAnimating()
     }
 }

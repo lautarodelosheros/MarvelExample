@@ -9,12 +9,21 @@ import UIKit
 
 class ComicsTableViewController: UITableViewController {
 
-    private var comics = [Comic]()
+    private var comics = [Comic]() {
+        didSet {
+            delegate?.didUpdateComics()
+            guard isViewLoaded else { return }
+            DispatchQueue.main.async { [weak self] in
+                self?.tableView.reloadData()
+            }
+        }
+    }
     
     weak var delegate: ComicsTableViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.reloadData()
     }
     
     override func viewDidLayoutSubviews() {
@@ -25,11 +34,8 @@ class ComicsTableViewController: UITableViewController {
     func showComics(for character: Character) {
         MarvelAPIClient.default.getCharacterComics(characterId: character.id, pageNumber: 0, pageSize: 20) {
             
-        } onSuccess: { comics in
-            DispatchQueue.main.async { [weak self] in
-                self?.comics = comics
-                self?.tableView.reloadData()
-            }
+        } onSuccess: { [weak self] comics in
+            self?.comics = comics
         } onFailure: {
             // TODO: Show error
         }
@@ -38,11 +44,8 @@ class ComicsTableViewController: UITableViewController {
     func showComics(for event: Event) {
         MarvelAPIClient.default.getEventComics(eventId: event.id, pageNumber: 0, pageSize: 20) {
             
-        } onSuccess: { comics in
-            DispatchQueue.main.async { [weak self] in
-                self?.comics = comics
-                self?.tableView.reloadData()
-            }
+        } onSuccess: { [weak self] comics in
+            self?.comics = comics
         } onFailure: {
             // TODO: Show error
         }
@@ -65,4 +68,5 @@ class ComicsTableViewController: UITableViewController {
 protocol ComicsTableViewControllerDelegate: AnyObject {
     
     func didUpdateContentHeight(newValue: CGFloat)
+    func didUpdateComics()
 }
