@@ -42,7 +42,17 @@ class MainTabBarController: UITabBarController {
             selectedImage: UIImage(named: "SuperheroSelected")
         )
         charactersNavigationController.tabBarItem = charactersTabBarItem
-        setViewControllers([charactersNavigationController], animated: false)
+        
+        let eventsNavigationController = UIStoryboard(name: "Events", bundle: nil)
+            .instantiateInitialViewController() as! UINavigationController
+        let eventsTabBarItem = UITabBarItem(
+            title: "Events",
+            image: UIImage(named: "CalendarUnselected"),
+            selectedImage: UIImage(named: "CalendarSelected")
+        )
+        eventsNavigationController.tabBarItem = eventsTabBarItem
+        
+        setViewControllers([charactersNavigationController, eventsNavigationController], animated: false)
         selectedIndex = TabIndex.characters.rawValue
     }
     

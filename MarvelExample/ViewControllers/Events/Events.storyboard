@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4eO-RF-LJ9">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+        <array key="RobotoCondensed-Regular.ttf">
+            <string>RobotoCondensed-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Events-->
+        <scene sceneID="BYx-v9-MHF">
+            <objects>
+                <tableViewController id="6FM-zI-QOp" customClass="EventsTableViewController" customModule="MarvelExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="7wM-d1-Rau">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="MainBackground"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="fvo-ev-a0Q" customClass="EventTableViewCell" customModule="MarvelExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fvo-ev-a0Q" id="ANN-Rf-x9t">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gut-wC-5P5">
+                                            <rect key="frame" x="8" y="4" width="374" height="120"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="elm-mx-n16">
+                                                    <rect key="frame" x="17" y="17" width="86" height="86"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="elm-mx-n16" secondAttribute="height" multiplier="1:1" id="K8z-VN-xcW"/>
+                                                        <constraint firstAttribute="height" constant="86" id="wpd-hX-Hrt"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2A9-97-wC0">
+                                                    <rect key="frame" x="136" y="14.999999999999998" width="205" height="28.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="24"/>
+                                                    <color key="textColor" name="PrimaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="756" text="2 de Octubre 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFC-Wx-Xjz">
+                                                    <rect key="frame" x="136" y="51.333333333333336" width="205" height="16.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                    <color key="textColor" name="SecondaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="elm-mx-n16" firstAttribute="leading" secondItem="Gut-wC-5P5" secondAttribute="leading" constant="17" id="1GP-8U-4EV"/>
+                                                <constraint firstItem="2A9-97-wC0" firstAttribute="top" secondItem="Gut-wC-5P5" secondAttribute="top" constant="15" id="Hzg-8d-vO1"/>
+                                                <constraint firstItem="rFC-Wx-Xjz" firstAttribute="leading" secondItem="2A9-97-wC0" secondAttribute="leading" id="VVy-pK-GMy"/>
+                                                <constraint firstAttribute="trailing" secondItem="2A9-97-wC0" secondAttribute="trailing" constant="33" id="WMv-or-xGc"/>
+                                                <constraint firstItem="elm-mx-n16" firstAttribute="top" secondItem="Gut-wC-5P5" secondAttribute="top" constant="17" id="Zm4-ZT-qtO"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="rFC-Wx-Xjz" secondAttribute="bottom" constant="15" id="dxe-Wb-yFb"/>
+                                                <constraint firstItem="rFC-Wx-Xjz" firstAttribute="top" secondItem="2A9-97-wC0" secondAttribute="bottom" constant="8" id="jXT-eX-QO5"/>
+                                                <constraint firstItem="2A9-97-wC0" firstAttribute="leading" secondItem="elm-mx-n16" secondAttribute="trailing" constant="33" id="loi-ox-2mN"/>
+                                                <constraint firstAttribute="bottom" secondItem="elm-mx-n16" secondAttribute="bottom" constant="17" id="vyg-Il-FXy"/>
+                                                <constraint firstItem="rFC-Wx-Xjz" firstAttribute="trailing" secondItem="2A9-97-wC0" secondAttribute="trailing" id="zaL-ns-jc1"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Gut-wC-5P5" secondAttribute="trailing" constant="8" id="43t-YS-39h"/>
+                                        <constraint firstItem="Gut-wC-5P5" firstAttribute="top" secondItem="ANN-Rf-x9t" secondAttribute="top" constant="4" id="B1h-TW-qPd"/>
+                                        <constraint firstItem="Gut-wC-5P5" firstAttribute="leading" secondItem="ANN-Rf-x9t" secondAttribute="leading" constant="8" id="dV9-fx-6sL"/>
+                                        <constraint firstAttribute="bottom" secondItem="Gut-wC-5P5" secondAttribute="bottom" constant="4" id="zCD-tH-K2B"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="cardView" destination="Gut-wC-5P5" id="dal-sH-fCe"/>
+                                    <outlet property="eventDateLabel" destination="rFC-Wx-Xjz" id="NQT-rI-F68"/>
+                                    <outlet property="eventImageView" destination="elm-mx-n16" id="wXJ-7S-kRU"/>
+                                    <outlet property="eventTitleLabel" destination="2A9-97-wC0" id="KLi-XK-F5o"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6FM-zI-QOp" id="ekX-L0-qFi"/>
+                            <outlet property="delegate" destination="6FM-zI-QOp" id="uLD-wX-LG7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Events" id="8ke-b2-nck"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmz-yA-4EC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130.7692307692307" y="-78.199052132701425"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="loP-Ox-hOw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4eO-RF-LJ9" customClass="MainNavigationController" customModule="MarvelExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AOc-LN-V3i">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6FM-zI-QOp" kind="relationship" relationship="rootViewController" id="DI3-b2-2Ey"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQM-l8-EPc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201.53846153846152" y="-78.199052132701425"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="MainBackground">
+            <color red="0.92549019607843142" green="0.93725490196078431" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryText">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryText">
+            <color red="0.13333333333333333" green="0.12549019607843137" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

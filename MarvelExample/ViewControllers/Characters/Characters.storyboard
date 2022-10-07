@@ -89,6 +89,7 @@
                                         <constraint firstItem="iRv-9E-ae2" firstAttribute="top" secondItem="rGS-ET-IbW" secondAttribute="top" constant="4" id="efu-Fz-7fG"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <outlet property="characterImageView" destination="lfS-eX-utP" id="Uw2-je-uGF"/>
                                     <outlet property="descriptionLabel" destination="Vqt-YG-hJE" id="Bdh-eB-Gha"/>
