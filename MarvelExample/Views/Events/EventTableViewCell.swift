@@ -19,9 +19,27 @@ class EventTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        setUpDateFormatter()
+        setUpCardView()
+        setUpImageView()
+    }
+    
+    private func setUpDateFormatter() {
         dateFormatter.locale = Locale(identifier: "es-ES")
         dateFormatter.monthSymbols = dateFormatter.monthSymbols.map { $0.capitalized }
         dateFormatter.dateFormat = "d 'de' MMMM yyyy"
+    }
+    
+    private func setUpCardView() {
+        cardView.layer.cornerRadius = 4
+        cardView.layer.shadowColor = UIColor.black.cgColor
+        cardView.layer.shadowOpacity = 0.2
+        cardView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        cardView.layer.shadowRadius = 4
+    }
+    
+    private func setUpImageView() {
+        eventImageView.roundCorners(corners: [.topLeft, .bottomLeft], radius: 4)
     }
     
     func bind(with event: Event) {
