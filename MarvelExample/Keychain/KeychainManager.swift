@@ -24,7 +24,7 @@ class KeychainManager {
     
     @discardableResult
     static func save(key: Key, data: Data) -> OSStatus {
-        var query = [
+        let query = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrAccount: key.rawValue,
             kSecValueData: data
@@ -35,7 +35,7 @@ class KeychainManager {
     }
     
     static func getData(key: Key) -> Data? {
-        var query = [
+        let query = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrAccount: key.rawValue,
             kSecReturnData: true,
@@ -52,7 +52,7 @@ class KeychainManager {
     }
     
     static func remove(key: Key) {
-        var query = [
+        let query = [
             kSecClass: kSecClassGenericPassword,
             kSecAttrAccount: key.rawValue
         ] as [String : Any]
