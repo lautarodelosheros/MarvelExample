@@ -14,6 +14,8 @@ class CharacterTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    private var character: Character?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setUpShadowView()
@@ -28,6 +30,7 @@ class CharacterTableViewCell: UITableViewCell {
     }
     
     func bind(with character: Character) {
+        self.character = character
         nameLabel.text = character.name.uppercased()
         descriptionLabel.text = character.description
         setCharacterImage(from: character)
@@ -42,6 +45,10 @@ class CharacterTableViewCell: UITableViewCell {
             path: thumbnail.path,
             fileExtension: thumbnail.extension
         ) { [weak self] image in
+            guard character.id == self?.character?.id else {
+                // Discard image if character changed
+                return
+            }
             self?.characterImageView.image = image
         }
     }
