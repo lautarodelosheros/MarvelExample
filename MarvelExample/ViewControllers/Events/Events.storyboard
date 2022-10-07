@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Events-->
+        <!--Marvel Challenge-->
         <scene sceneID="BYx-v9-MHF">
             <objects>
                 <tableViewController id="6FM-zI-QOp" customClass="EventsTableViewController" customModule="MarvelExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,7 +90,7 @@
                             <outlet property="delegate" destination="6FM-zI-QOp" id="uLD-wX-LG7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Events" id="8ke-b2-nck"/>
+                    <navigationItem key="navigationItem" title="Marvel Challenge" id="8ke-b2-nck"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmz-yA-4EC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

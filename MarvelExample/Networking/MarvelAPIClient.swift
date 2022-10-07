@@ -40,9 +40,11 @@ class MarvelAPIClient {
     }
     
     func getEvents(pageNumber: Int, pageSize: Int, onCompletion: @escaping () -> Void, onSuccess: @escaping ([Event]) -> Void, onFailure: @escaping () -> Void) {
-        let url = baseUrl.appendingPathComponent(MarvelEndpoints.public)
+        var url = baseUrl.appendingPathComponent(MarvelEndpoints.public)
             .appendingPathComponent(MarvelEndpoints.events)
             .paginatedBy(pageNumber: pageNumber, pageSize: pageSize)
+        let orderByQueryItem = URLQueryItem(name: "orderBy", value: "startDate")
+        url.append(queryItems: [orderByQueryItem])
         Session.default.request(url).responseDecodable(of: MarvelResponse<Event>.self) { responseData in
             onCompletion()
             switch responseData.result {
