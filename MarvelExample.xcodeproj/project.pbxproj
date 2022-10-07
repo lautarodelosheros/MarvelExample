@@ -13,6 +13,7 @@
 		6169DD8028F0C2780079905C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6169DD7E28F0C2780079905C /* GoogleService-Info.plist */; };
 		6169DD8128F0C2780079905C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6169DD7E28F0C2780079905C /* GoogleService-Info.plist */; };
 		6169DD8428F0C3C50079905C /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6169DD8328F0C3C50079905C /* FirebaseAuthManager.swift */; };
+		6169DD8728F0C9DF0079905C /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6169DD8628F0C9DF0079905C /* KeychainManager.swift */; };
 		617A6CA928EF906300FEBC2B /* RemoteResourceFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CA828EF906300FEBC2B /* RemoteResourceFile.swift */; };
 		617A6CAB28EF917300FEBC2B /* UIImage+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CAA28EF917300FEBC2B /* UIImage+Extensions.swift */; };
 		617A6CAD28EF967400FEBC2B /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CAC28EF967400FEBC2B /* ImageProvider.swift */; };
@@ -97,6 +98,7 @@
 		6169DD7C28F089FD0079905C /* EventCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCellView.xib; sourceTree = "<group>"; };
 		6169DD7E28F0C2780079905C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6169DD8328F0C3C50079905C /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		6169DD8628F0C9DF0079905C /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		617A6CA828EF906300FEBC2B /* RemoteResourceFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteResourceFile.swift; sourceTree = "<group>"; };
 		617A6CAA28EF917300FEBC2B /* UIImage+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extensions.swift"; sourceTree = "<group>"; };
 		617A6CAC28EF967400FEBC2B /* ImageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
@@ -203,6 +205,14 @@
 				6169DD8328F0C3C50079905C /* FirebaseAuthManager.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		6169DD8528F0C9D10079905C /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				6169DD8628F0C9DF0079905C /* KeychainManager.swift */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		617A6CAE28EF9E1600FEBC2B /* Resources */ = {
@@ -328,6 +338,7 @@
 		61DECA7528EB689B008BE420 /* MarvelExample */ = {
 			isa = PBXGroup;
 			children = (
+				6169DD8528F0C9D10079905C /* Keychain */,
 				6169DD8228F0C3B50079905C /* Firebase */,
 				617A6CAE28EF9E1600FEBC2B /* Resources */,
 				61DECABE28EE1CD4008BE420 /* Extensions */,
@@ -766,6 +777,7 @@
 				617A6CAD28EF967400FEBC2B /* ImageProvider.swift in Sources */,
 				617A6CA928EF906300FEBC2B /* RemoteResourceFile.swift in Sources */,
 				61AA11FF28F075D6004AAA7D /* ComicsTableViewController.swift in Sources */,
+				6169DD8728F0C9DF0079905C /* KeychainManager.swift in Sources */,
 				617A6CF128EFDE5700FEBC2B /* CharacterDetailViewController.swift in Sources */,
 				61DECABD28EE1A26008BE420 /* MarvelResponse.swift in Sources */,
 				61DECAAE28EB73AB008BE420 /* CharactersTableViewController.swift in Sources */,

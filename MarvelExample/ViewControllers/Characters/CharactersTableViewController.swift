@@ -10,11 +10,14 @@ import SkeletonView
 
 class CharactersTableViewController: UITableViewController {
 
+    @IBOutlet weak var closeSessionButton: UIBarButtonItem!
+    
     private let sections: [Section] = [.characters, .loadMore]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        setUpNavigationItem()
         getCharacters()
     }
     
@@ -24,6 +27,14 @@ class CharactersTableViewController: UITableViewController {
             forCellReuseIdentifier: "loadMoreCell"
         )
         tableView.contentInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+    }
+    
+    private func setUpNavigationItem() {
+        let textAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 16) ?? UIFont.boldSystemFont(ofSize: 16)
+        ]
+        closeSessionButton.setTitleTextAttributes(textAttributes, for: .normal)
+        closeSessionButton.setTitleTextAttributes(textAttributes, for: .selected)
     }
     
     private func getCharacters() {
@@ -122,6 +133,11 @@ class CharactersTableViewController: UITableViewController {
         let characterDetailViewController = CharacterDetailViewController(character: character)
         characterDetailViewController.hidesBottomBarWhenPushed = true
         navigationController?.pushViewController(characterDetailViewController, animated: true)
+    }
+    
+    @IBAction func closeSessionButtonTouched(_ sender: Any) {
+        KeychainManager.remove(key: .token)
+        dismiss(animated: true)
     }
     
     private enum Section {

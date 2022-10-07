@@ -28,7 +28,7 @@
                                             <rect key="frame" x="8" y="4" width="374" height="0.0"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bia-7Q-HRw" customClass="EventCellView" customModule="MarvelExample" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
@@ -72,7 +72,16 @@
                             <outlet property="delegate" destination="6FM-zI-QOp" id="uLD-wX-LG7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Marvel Challenge" id="8ke-b2-nck"/>
+                    <navigationItem key="navigationItem" title="Marvel Challenge" id="8ke-b2-nck">
+                        <barButtonItem key="leftBarButtonItem" title="Exit" id="GKq-aC-63k">
+                            <connections>
+                                <action selector="closeSessionButtonTouched:" destination="6FM-zI-QOp" id="PrP-o1-W0T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeSessionButton" destination="GKq-aC-63k" id="OJK-kx-qrA"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmz-yA-4EC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -122,7 +122,16 @@
                             <outlet property="delegate" destination="C50-Ue-Wbt" id="fEN-Kg-BDT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Marvel Challenge" id="Lmw-pw-Cc9"/>
+                    <navigationItem key="navigationItem" title="Marvel Challenge" id="Lmw-pw-Cc9">
+                        <barButtonItem key="leftBarButtonItem" title="Exit" id="cEn-oR-FHn">
+                            <connections>
+                                <action selector="closeSessionButtonTouched:" destination="C50-Ue-Wbt" id="wv6-DF-fnV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeSessionButton" destination="cEn-oR-FHn" id="M9a-9F-Yw4"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEM-92-Op5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,14 +9,25 @@ import UIKit
 
 class EventsTableViewController: UITableViewController {
 
+    @IBOutlet weak var closeSessionButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        setUpNavigationItem()
         getEvents()
     }
     
     private func setUpTableView() {
         tableView.contentInset = UIEdgeInsets(top: 9, left: 0, bottom: 9, right: 0)
+    }
+    
+    private func setUpNavigationItem() {
+        let textAttributes = [
+            NSAttributedString.Key.font: UIFont(name: "RobotoCondensed-Bold", size: 16) ?? UIFont.boldSystemFont(ofSize: 16)
+        ]
+        closeSessionButton.setTitleTextAttributes(textAttributes, for: .normal)
+        closeSessionButton.setTitleTextAttributes(textAttributes, for: .selected)
     }
     
     private func getEvents() {
@@ -30,7 +41,12 @@ class EventsTableViewController: UITableViewController {
             // TODO: Show error message
         }
     }
-
+    
+    @IBAction func closeSessionButtonTouched(_ sender: Any) {
+        KeychainManager.remove(key: .token)
+        dismiss(animated: true)
+    }
+    
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

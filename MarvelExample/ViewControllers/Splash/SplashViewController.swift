@@ -9,6 +9,8 @@ import UIKit
 import FirebaseAuthUI
 
 class SplashViewController: UIViewController {
+    
+    private var shouldCheckForToken = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +18,19 @@ class SplashViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presentAuthenticationViewController()
+        checkForToken()
+    }
+    
+    private func checkForToken() {
+        guard shouldCheckForToken else {
+            return
+        }
+        shouldCheckForToken.toggle()
+        if KeychainManager.getString(key: .token) == nil {
+            presentAuthenticationViewController()
+        } else {
+            presentMainTabBarController()
+        }
     }
     
     private func presentAuthenticationViewController() {
@@ -33,17 +47,24 @@ class SplashViewController: UIViewController {
         mainTabBarController.modalPresentationStyle = .fullScreen
         mainTabBarController.modalTransitionStyle = .crossDissolve
         present(mainTabBarController, animated: true)
+        shouldCheckForToken = true
     }
 }
 
 extension SplashViewController: FUIAuthDelegate {
     
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
-        guard error == nil else {
-            presentAuthenticationViewController()
-            return
+        authDataResult?.user.getIDToken { token, error in
+            guard let token = token else { return }
+            KeychainManager.save(key: .token, string: token)
         }
-        presentMainTabBarController()
+        DispatchQueue.main.async { [weak self] in
+            guard error == nil else {
+                self?.presentAuthenticationViewController()
+                return
+            }
+            self?.presentMainTabBarController()
+        }
     }
 }
 
