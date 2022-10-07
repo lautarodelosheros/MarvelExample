@@ -28,8 +28,11 @@
                                             <rect key="frame" x="8" y="4" width="374" height="0.0"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bia-7Q-HRw" customClass="EventCellView" customModule="MarvelExample" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="120"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -39,6 +42,9 @@
                                                 <constraint firstItem="bia-7Q-HRw" firstAttribute="leading" secondItem="x87-hO-xJL" secondAttribute="leading" id="dFq-Ck-czx"/>
                                                 <constraint firstItem="bia-7Q-HRw" firstAttribute="top" secondItem="x87-hO-xJL" secondAttribute="top" id="iDD-8f-1bb"/>
                                             </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
                                         </view>
                                     </subviews>
                                     <constraints>
@@ -47,8 +53,14 @@
                                         <constraint firstItem="x87-hO-xJL" firstAttribute="leading" secondItem="ANN-Rf-x9t" secondAttribute="leading" constant="8" id="YC5-8m-3Ei"/>
                                         <constraint firstAttribute="bottom" secondItem="x87-hO-xJL" secondAttribute="bottom" constant="4" id="p6p-rt-miF"/>
                                     </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="cardView" destination="x87-hO-xJL" id="8dp-Y2-gZf"/>
                                     <outlet property="eventCellView" destination="bia-7Q-HRw" id="kI7-De-4Hp"/>

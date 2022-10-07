@@ -11,7 +11,7 @@ import Foundation
 class DataProvider<T> {
     
     fileprivate var currentPage = 0
-    fileprivate let pageSize: Int
+    let pageSize: Int
     fileprivate var isFetchingFromServer = false
     fileprivate var noMoreData = false
     

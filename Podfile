@@ -4,6 +4,7 @@ target 'MarvelExample' do
   use_frameworks!
 
   pod 'Alamofire'
+  pod 'SkeletonView'
 
   target 'MarvelExampleTests' do
     inherit! :search_paths

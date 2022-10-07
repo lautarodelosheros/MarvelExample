@@ -34,18 +34,28 @@ class EventsTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        EventsProvider.shared.data.count
+        if EventsProvider.shared.data.isEmpty {
+            // Skeleton cells
+            return EventsProvider.shared.pageSize
+        }
+        return EventsProvider.shared.data.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "eventCell", for: indexPath) as! EventTableViewCell
-        let event = EventsProvider.shared.data[indexPath.row]
-        cell.bind(with: event)
+        if indexPath.row > EventsProvider.shared.data.count - 1 {
+            cell.showAnimatedSkeleton()
+        } else {
+            cell.hideSkeleton()
+            let event = EventsProvider.shared.data[indexPath.row]
+            cell.bind(with: event)
+        }
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        guard indexPath.row < EventsProvider.shared.data.count else { return }
         let event = EventsProvider.shared.data[indexPath.row]
         let eventDetailViewController = EventDetailViewController(event: event)
         eventDetailViewController.modalTransitionStyle = .crossDissolve

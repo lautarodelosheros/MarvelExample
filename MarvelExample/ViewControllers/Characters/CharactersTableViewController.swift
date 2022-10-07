@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class CharactersTableViewController: UITableViewController {
 
@@ -46,10 +47,23 @@ class CharactersTableViewController: UITableViewController {
         let section = sections[section]
         switch section {
         case .characters:
-            return CharactersProvider.shared.data.count
+            return numberOfCharacterCells()
         case .loadMore:
             return CharactersProvider.shared.theresMoreData ? 1 : 0
         }
+    }
+    
+    private func numberOfCharacterCells() -> Int {
+        guard CharactersProvider.shared.theresMoreData else {
+            // No skeleton cells
+            return CharactersProvider.shared.data.count
+        }
+        if CharactersProvider.shared.data.isEmpty {
+            // Skeleton cells
+            return CharactersProvider.shared.pageSize
+        }
+        // Plus one skeleton cell
+        return CharactersProvider.shared.data.count + 1
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -64,8 +78,13 @@ class CharactersTableViewController: UITableViewController {
     
     private func characterCell(at indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "characterCell", for: indexPath) as! CharacterTableViewCell
-        let character = CharactersProvider.shared.data[indexPath.row]
-        cell.bind(with: character)
+        if indexPath.row > CharactersProvider.shared.data.count - 1 {
+            cell.showAnimatedSkeleton()
+        } else {
+            cell.hideSkeleton()
+            let character = CharactersProvider.shared.data[indexPath.row]
+            cell.bind(with: character)
+        }
         return cell
     }
     
@@ -98,6 +117,7 @@ class CharactersTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard indexPath.row < CharactersProvider.shared.data.count else { return }
         let character = CharactersProvider.shared.data[indexPath.row]
         let characterDetailViewController = CharacterDetailViewController(character: character)
         characterDetailViewController.hidesBottomBarWhenPushed = true
@@ -107,5 +127,12 @@ class CharactersTableViewController: UITableViewController {
     private enum Section {
         case characters
         case loadMore
+    }
+}
+
+extension CharactersTableViewController: SkeletonTableViewDataSource {
+    
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        "characterCell"
     }
 }
