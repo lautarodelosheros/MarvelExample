@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6126A74728F0DB740056C4F4 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126A74628F0DB740056C4F4 /* UIViewController+Extensions.swift */; };
 		6169DD7B28F089EF0079905C /* EventCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6169DD7A28F089EF0079905C /* EventCellView.swift */; };
 		6169DD7D28F089FD0079905C /* EventCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6169DD7C28F089FD0079905C /* EventCellView.xib */; };
 		6169DD7F28F0C2780079905C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6169DD7E28F0C2780079905C /* GoogleService-Info.plist */; };
@@ -94,6 +95,7 @@
 
 /* Begin PBXFileReference section */
 		16CC2DB93302B8BE09F38F70 /* Pods-MarvelExampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MarvelExampleTests.release.xcconfig"; path = "Target Support Files/Pods-MarvelExampleTests/Pods-MarvelExampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		6126A74628F0DB740056C4F4 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		6169DD7A28F089EF0079905C /* EventCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCellView.swift; sourceTree = "<group>"; };
 		6169DD7C28F089FD0079905C /* EventCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCellView.xib; sourceTree = "<group>"; };
 		6169DD7E28F0C2780079905C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -461,6 +463,7 @@
 				61DECABF28EE1CE1008BE420 /* URL+Extensions.swift */,
 				617A6CAA28EF917300FEBC2B /* UIImage+Extensions.swift */,
 				617A6CED28EFDB3800FEBC2B /* UIView+Extensions.swift */,
+				6126A74628F0DB740056C4F4 /* UIViewController+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -786,6 +789,7 @@
 				61AA120628F077E6004AAA7D /* Comic.swift in Sources */,
 				6169DD7B28F089EF0079905C /* EventCellView.swift in Sources */,
 				61DECAB828EE16D7008BE420 /* MarvelEndpoints.swift in Sources */,
+				6126A74728F0DB740056C4F4 /* UIViewController+Extensions.swift in Sources */,
 				61DECA7728EB689B008BE420 /* AppDelegate.swift in Sources */,
 				6169DD8428F0C3C50079905C /* FirebaseAuthManager.swift in Sources */,
 				61DECAAB28EB7207008BE420 /* MainTabBarController.swift in Sources */,

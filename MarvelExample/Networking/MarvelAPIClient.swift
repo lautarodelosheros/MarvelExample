@@ -24,7 +24,7 @@ class MarvelAPIClient {
         baseUrl.append(queryItems: [apiKeyQueryItem, hashQueryItem, timestampQueryItem])
     }
     
-    func getCharacters(pageNumber: Int, pageSize: Int, onCompletion: @escaping () -> Void, onSuccess: @escaping ([Character]) -> Void, onFailure: @escaping () -> Void) {
+    func getCharacters(pageNumber: Int, pageSize: Int, onCompletion: @escaping () -> Void, onSuccess: @escaping ([Character]) -> Void, onFailure: @escaping (Error) -> Void) {
         let url = baseUrl.appendingPathComponent(MarvelEndpoints.public)
             .appendingPathComponent(MarvelEndpoints.characters)
             .paginatedBy(pageNumber: pageNumber, pageSize: pageSize)
@@ -34,12 +34,12 @@ class MarvelAPIClient {
             case .success(let response):
                 onSuccess(response.data.results)
             case .failure(let error):
-                onFailure()
+                onFailure(error)
             }
         }
     }
     
-    func getEvents(pageNumber: Int, pageSize: Int, onCompletion: @escaping () -> Void, onSuccess: @escaping ([Event]) -> Void, onFailure: @escaping () -> Void) {
+    func getEvents(pageNumber: Int, pageSize: Int, onCompletion: @escaping () -> Void, onSuccess: @escaping ([Event]) -> Void, onFailure: @escaping (Error) -> Void) {
         var url = baseUrl.appendingPathComponent(MarvelEndpoints.public)
             .appendingPathComponent(MarvelEndpoints.events)
             .paginatedBy(pageNumber: pageNumber, pageSize: pageSize)
@@ -51,12 +51,12 @@ class MarvelAPIClient {
             case .success(let response):
                 onSuccess(response.data.results)
             case .failure(let error):
-                onFailure()
+                onFailure(error)
             }
         }
     }
     
-    func getCharacterComics(characterId: Int, pageNumber: Int, pageSize: Int, onCompletion: @escaping () -> Void, onSuccess: @escaping ([Comic]) -> Void, onFailure: @escaping () -> Void) {
+    func getCharacterComics(characterId: Int, pageNumber: Int, pageSize: Int, onCompletion: @escaping () -> Void, onSuccess: @escaping ([Comic]) -> Void, onFailure: @escaping (Error) -> Void) {
         let url = baseUrl.appendingPathComponent(MarvelEndpoints.public)
             .appendingPathComponent(MarvelEndpoints.characters)
             .appendingPathComponent(String(characterId))
@@ -68,12 +68,12 @@ class MarvelAPIClient {
             case .success(let response):
                 onSuccess(response.data.results)
             case .failure(let error):
-                onFailure()
+                onFailure(error)
             }
         }
     }
     
-    func getEventComics(eventId: Int, pageNumber: Int, pageSize: Int, onCompletion: @escaping () -> Void, onSuccess: @escaping ([Comic]) -> Void, onFailure: @escaping () -> Void) {
+    func getEventComics(eventId: Int, pageNumber: Int, pageSize: Int, onCompletion: @escaping () -> Void, onSuccess: @escaping ([Comic]) -> Void, onFailure: @escaping (Error) -> Void) {
         let url = baseUrl.appendingPathComponent(MarvelEndpoints.public)
             .appendingPathComponent(MarvelEndpoints.events)
             .appendingPathComponent(String(eventId))
@@ -85,7 +85,7 @@ class MarvelAPIClient {
             case .success(let response):
                 onSuccess(response.data.results)
             case .failure(let error):
-                onFailure()
+                onFailure(error)
             }
         }
     }

@@ -36,8 +36,8 @@ class ComicsTableViewController: UITableViewController {
             
         } onSuccess: { [weak self] comics in
             self?.comics = comics
-        } onFailure: {
-            // TODO: Show error
+        } onFailure: { [weak self] error in
+            self?.showError(message: error.localizedDescription)
         }
     }
     
@@ -46,8 +46,8 @@ class ComicsTableViewController: UITableViewController {
             
         } onSuccess: { [weak self] comics in
             self?.comics = comics
-        } onFailure: {
-            // TODO: Show error
+        } onFailure: { error in
+            
         }
     }
 

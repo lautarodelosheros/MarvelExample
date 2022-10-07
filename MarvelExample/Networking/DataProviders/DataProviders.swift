@@ -21,7 +21,7 @@ class DataProvider<T> {
         self.pageSize = pageSize
     }
     
-    func getData(onCompletion: @escaping () -> Void, onSuccess: @escaping () -> Void, onFailure: @escaping () -> Void) {
+    func getData(onCompletion: @escaping () -> Void, onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
         guard !isFetchingFromServer,
               !noMoreData
         else {
@@ -31,7 +31,7 @@ class DataProvider<T> {
         fetchData(onCompletion: onCompletion, onSuccess: onSuccess, onFailure: onFailure)
     }
     
-    fileprivate func fetchData(onCompletion: @escaping () -> Void, onSuccess: @escaping () -> Void, onFailure: @escaping () -> Void) {
+    fileprivate func fetchData(onCompletion: @escaping () -> Void, onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
         isFetchingFromServer = true
     }
     
@@ -64,7 +64,7 @@ class CharactersProvider: DataProvider<Character> {
         super.init(pageSize: 15)
     }
     
-    override fileprivate func fetchData(onCompletion: @escaping () -> Void, onSuccess: @escaping () -> Void, onFailure: @escaping () -> Void) {
+    override fileprivate func fetchData(onCompletion: @escaping () -> Void, onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
         super.fetchData(onCompletion: onCompletion, onSuccess: onSuccess, onFailure: onFailure)
         MarvelAPIClient.default.getCharacters(pageNumber: currentPage, pageSize: pageSize) {
             onCompletion()
@@ -76,8 +76,8 @@ class CharactersProvider: DataProvider<Character> {
             }
             self.currentPage += 1
             onSuccess()
-        } onFailure: {
-            onFailure()
+        } onFailure: { error in
+            onFailure(error)
         }
     }
 }
@@ -91,7 +91,7 @@ class EventsProvider: DataProvider<Event> {
         super.init(pageSize: 25)
     }
     
-    override fileprivate func fetchData(onCompletion: @escaping () -> Void, onSuccess: @escaping () -> Void, onFailure: @escaping () -> Void) {
+    override fileprivate func fetchData(onCompletion: @escaping () -> Void, onSuccess: @escaping () -> Void, onFailure: @escaping (Error) -> Void) {
         super.fetchData(onCompletion: onCompletion, onSuccess: onSuccess, onFailure: onFailure)
         MarvelAPIClient.default.getEvents(pageNumber: currentPage, pageSize: pageSize) {
             onCompletion()
@@ -103,8 +103,8 @@ class EventsProvider: DataProvider<Event> {
             }
             self.currentPage += 1
             onSuccess()
-        } onFailure: {
-            onFailure()
+        } onFailure: { error in
+            onFailure(error)
         }
     }
 }

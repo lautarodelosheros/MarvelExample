@@ -37,8 +37,8 @@ class EventsTableViewController: UITableViewController {
             DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
             }
-        } onFailure: {
-            // TODO: Show error message
+        } onFailure: { [weak self] error in
+            self?.showError(message: error.localizedDescription)
         }
     }
     

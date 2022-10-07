@@ -44,8 +44,8 @@ class CharactersTableViewController: UITableViewController {
             DispatchQueue.main.async { [weak self] in
                 self?.tableView.reloadData()
             }
-        } onFailure: {
-            // TODO: Show some error message
+        } onFailure: { [weak self] error in
+            self?.showError(message: error.localizedDescription)
         }
     }
 
