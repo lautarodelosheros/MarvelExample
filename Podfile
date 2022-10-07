@@ -5,6 +5,8 @@ target 'MarvelExample' do
 
   pod 'Alamofire'
   pod 'SkeletonView'
+  pod 'FirebaseUI/Auth'
+  pod 'FirebaseUI/Email'
 
   target 'MarvelExampleTests' do
     inherit! :search_paths

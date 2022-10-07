@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuthUI
 
 class SplashViewController: UIViewController {
 
@@ -15,7 +16,16 @@ class SplashViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        presentMainTabBarController()
+        presentAuthenticationViewController()
+    }
+    
+    private func presentAuthenticationViewController() {
+        guard let authenticationViewController = FirebaseAuthManager.shared.getAuthenticationViewController(delegate: self) else {
+            return
+        }
+        authenticationViewController.modalTransitionStyle = .crossDissolve
+        authenticationViewController.modalPresentationStyle = .fullScreen
+        present(authenticationViewController, animated: true)
     }
     
     private func presentMainTabBarController() {
@@ -23,6 +33,17 @@ class SplashViewController: UIViewController {
         mainTabBarController.modalPresentationStyle = .fullScreen
         mainTabBarController.modalTransitionStyle = .crossDissolve
         present(mainTabBarController, animated: true)
+    }
+}
+
+extension SplashViewController: FUIAuthDelegate {
+    
+    func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
+        guard error == nil else {
+            presentAuthenticationViewController()
+            return
+        }
+        presentMainTabBarController()
     }
 }
 
