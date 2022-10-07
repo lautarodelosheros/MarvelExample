@@ -12,4 +12,5 @@ struct MarvelEndpoints {
     static let `public` = "public"
     static let characters = "characters"
     static let events = "events"
+    static let comics = "comics"
 }

@@ -28,6 +28,7 @@ class CharacterDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpNavigationItem()
+        setUpComicsTableViewController()
         reloadData()
     }
     
@@ -35,6 +36,15 @@ class CharacterDetailViewController: UIViewController {
         let backButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(onBackTouched))
         navigationItem.setLeftBarButton(backButtonItem, animated: true)
         navigationController?.interactivePopGestureRecognizer?.delegate = self
+    }
+    
+    private func setUpComicsTableViewController() {
+        let comicsTableViewController = UIStoryboard(name: "Comics", bundle: nil).instantiateInitialViewController() as! ComicsTableViewController
+        addChild(comicsTableViewController)
+        comicsView.addSubview(comicsTableViewController.view)
+        comicsTableViewController.view.frame = comicsView.bounds
+        comicsTableViewController.didMove(toParent: self)
+        comicsTableViewController.showComics(for: character)
     }
     
     private func reloadData() {
