@@ -23,6 +23,7 @@
                 <outlet property="comicsViewHeightConstraint" destination="dwC-Hy-XRN" id="BXL-Qb-hq9"/>
                 <outlet property="descriptionLabel" destination="8fV-Db-LPa" id="ycw-YD-fSC"/>
                 <outlet property="imageView" destination="QFO-l3-INj" id="Gp4-qw-I41"/>
+                <outlet property="scrollView" destination="t0y-rr-mjM" id="LW2-z3-yFW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
