@@ -15,7 +15,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Characters Table View Controller-->
+        <!--Marvel Challenge-->
         <scene sceneID="rZr-9K-5qc">
             <objects>
                 <tableViewController id="C50-Ue-Wbt" customClass="CharactersTableViewController" customModule="MarvelExample" customModuleProvider="target" sceneMemberID="viewController">
@@ -102,20 +102,24 @@
                             <outlet property="delegate" destination="C50-Ue-Wbt" id="fEN-Kg-BDT"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Lmw-pw-Cc9"/>
+                    <navigationItem key="navigationItem" title="Marvel Challenge" id="Lmw-pw-Cc9"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QEM-92-Op5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1001.5384615384615" y="-28.436018957345969"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="iWU-wm-DA0">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jyq-x0-fCc" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jyq-x0-fCc" customClass="MainNavigationController" customModule="MarvelExample" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="JHN-gm-NCy">
                         <rect key="frame" x="0.0" y="47" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Toolbar"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -136,6 +140,9 @@
         </namedColor>
         <namedColor name="SecondaryText">
             <color red="0.13333333333333333" green="0.12549019607843137" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Toolbar">
+            <color red="0.14901960784313725" green="0.14901960784313725" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
