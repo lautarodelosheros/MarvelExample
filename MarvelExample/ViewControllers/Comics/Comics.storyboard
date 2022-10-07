@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kfu-NI-hDb">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21225"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Comics Table View Controller-->
+        <scene sceneID="05L-Zi-pbP">
+            <objects>
+                <tableViewController id="kfu-NI-hDb" customClass="ComicsTableViewController" customModule="MarvelExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="hwG-0I-O93">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="comicCell" id="tkE-Td-m3p" customClass="ComicTableViewCell" customModule="MarvelExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="106"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tkE-Td-m3p" id="LNi-p8-ibg">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="106"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Iron Man (1968) #55" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBc-yG-P79">
+                                            <rect key="frame" x="16" y="30" width="358" height="19.333333333333329"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                                            <color key="textColor" name="PrimaryText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" verticalCompressionResistancePriority="755" text="1968" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCX-ik-Bw1">
+                                            <rect key="frame" x="16" y="59.333333333333336" width="358" height="16.666666666666664"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                            <color key="textColor" name="DisabledText"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="FBc-yG-P79" firstAttribute="leading" secondItem="LNi-p8-ibg" secondAttribute="leading" constant="16" id="4S4-TS-Uja"/>
+                                        <constraint firstItem="SCX-ik-Bw1" firstAttribute="trailing" secondItem="FBc-yG-P79" secondAttribute="trailing" id="FGl-Ml-Lvl"/>
+                                        <constraint firstAttribute="trailing" secondItem="FBc-yG-P79" secondAttribute="trailing" constant="16" id="Izw-nl-zTV"/>
+                                        <constraint firstItem="SCX-ik-Bw1" firstAttribute="top" secondItem="FBc-yG-P79" secondAttribute="bottom" constant="10" id="WCJ-9x-EV3"/>
+                                        <constraint firstAttribute="bottom" secondItem="SCX-ik-Bw1" secondAttribute="bottom" constant="30" id="f8F-XN-JJu"/>
+                                        <constraint firstItem="FBc-yG-P79" firstAttribute="top" secondItem="LNi-p8-ibg" secondAttribute="top" constant="30" id="yqY-eR-qjC"/>
+                                        <constraint firstItem="SCX-ik-Bw1" firstAttribute="leading" secondItem="FBc-yG-P79" secondAttribute="leading" id="yxA-rV-NJP"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="nameLabel" destination="FBc-yG-P79" id="t0I-7Y-Ypy"/>
+                                    <outlet property="onSaleDateLabel" destination="SCX-ik-Bw1" id="Qo1-Xf-Emp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kfu-NI-hDb" id="9h0-Yr-UPy"/>
+                            <outlet property="delegate" destination="kfu-NI-hDb" id="BT3-yz-Yc4"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ylc-fa-yQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-63.076923076923073" y="-7.1090047393364921"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="DisabledText">
+            <color red="0.45500001311302185" green="0.45500001311302185" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryText">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

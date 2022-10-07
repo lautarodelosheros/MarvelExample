@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jyq-x0-fCc">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+        <array key="RobotoCondensed-Regular.ttf">
+            <string>RobotoCondensed-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Marvel Challenge-->
+        <scene sceneID="rZr-9K-5qc">
+            <objects>
+                <tableViewController id="C50-Ue-Wbt" customClass="CharactersTableViewController" customModule="MarvelExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="r5G-os-ILQ">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="MainBackground"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="characterCell" id="TkA-Q8-SGy" customClass="CharacterTableViewCell" customModule="MarvelExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TkA-Q8-SGy" id="rGS-ET-IbW">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XKC-gd-dzt">
+                                            <rect key="frame" x="8" y="4" width="374" height="120"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </view>
+                                        <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iRv-9E-ae2">
+                                            <rect key="frame" x="8" y="4" width="374" height="120"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lfS-eX-utP">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="lfS-eX-utP" secondAttribute="height" multiplier="1:1" id="EJu-xO-Z8i"/>
+                                                        <constraint firstAttribute="height" constant="120" id="lUe-4L-7pG"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHARACTER NAME" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BsG-3H-Uzf">
+                                                    <rect key="frame" x="136" y="14.999999999999998" width="222" height="28.333333333333329"/>
+                                                    <fontDescription key="fontDescription" name="RobotoCondensed-Regular" family="Roboto Condensed" pointSize="24"/>
+                                                    <color key="textColor" name="PrimaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="245" verticalCompressionResistancePriority="745" text="Character description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqt-YG-hJE">
+                                                    <rect key="frame" x="136" y="51.333333333333336" width="222" height="16.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="14"/>
+                                                    <color key="textColor" name="SecondaryText"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="lfS-eX-utP" secondAttribute="bottom" id="0A0-aT-V3z"/>
+                                                <constraint firstItem="lfS-eX-utP" firstAttribute="top" secondItem="iRv-9E-ae2" secondAttribute="top" id="0Yd-Dz-YSl"/>
+                                                <constraint firstItem="BsG-3H-Uzf" firstAttribute="top" secondItem="iRv-9E-ae2" secondAttribute="top" constant="15" id="5DO-6D-jjM"/>
+                                                <constraint firstItem="BsG-3H-Uzf" firstAttribute="leading" secondItem="lfS-eX-utP" secondAttribute="trailing" constant="16" id="UjW-SQ-Kjl"/>
+                                                <constraint firstItem="Vqt-YG-hJE" firstAttribute="trailing" secondItem="BsG-3H-Uzf" secondAttribute="trailing" id="Xdc-Ex-7bO"/>
+                                                <constraint firstItem="lfS-eX-utP" firstAttribute="leading" secondItem="iRv-9E-ae2" secondAttribute="leading" id="h7i-JL-f3X"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Vqt-YG-hJE" secondAttribute="bottom" constant="15" id="j5O-OP-FOa"/>
+                                                <constraint firstItem="Vqt-YG-hJE" firstAttribute="top" secondItem="BsG-3H-Uzf" secondAttribute="bottom" constant="8" id="qQL-g0-SrX"/>
+                                                <constraint firstAttribute="trailing" secondItem="BsG-3H-Uzf" secondAttribute="trailing" constant="16" id="tNF-pP-gLt"/>
+                                                <constraint firstItem="Vqt-YG-hJE" firstAttribute="leading" secondItem="BsG-3H-Uzf" secondAttribute="leading" id="u8Y-MK-LpI"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="4"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="iRv-9E-ae2" secondAttribute="trailing" constant="8" id="0iq-WF-k57"/>
+                                        <constraint firstItem="XKC-gd-dzt" firstAttribute="leading" secondItem="iRv-9E-ae2" secondAttribute="leading" id="6V9-9a-3vE"/>
+                                        <constraint firstAttribute="bottom" secondItem="iRv-9E-ae2" secondAttribute="bottom" constant="4" id="9EK-aJ-NCr"/>
+                                        <constraint firstItem="XKC-gd-dzt" firstAttribute="trailing" secondItem="iRv-9E-ae2" secondAttribute="trailing" id="E8T-xF-NgV"/>
+                                        <constraint firstItem="iRv-9E-ae2" firstAttribute="leading" secondItem="rGS-ET-IbW" secondAttribute="leading" constant="8" id="Edv-0A-Ru4"/>
+                                        <constraint firstItem="XKC-gd-dzt" firstAttribute="bottom" secondItem="iRv-9E-ae2" secondAttribute="bottom" id="VxH-9a-AWg"/>
+                                        <constraint firstItem="XKC-gd-dzt" firstAttribute="top" secondItem="iRv-9E-ae2" secondAttribute="top" id="Z7P-zR-pb1"/>
+                                        <constraint firstItem="iRv-9E-ae2" firstAttribute="top" secondItem="rGS-ET-IbW" secondAttribute="top" constant="4" id="efu-Fz-7fG"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="characterImageView" destination="lfS-eX-utP" id="Uw2-je-uGF"/>
+                                    <outlet property="descriptionLabel" destination="Vqt-YG-hJE" id="Bdh-eB-Gha"/>
+                                    <outlet property="nameLabel" destination="BsG-3H-Uzf" id="eUM-18-zwF"/>
+                                    <outlet property="shadowView" destination="XKC-gd-dzt" id="b8R-vc-NzO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="dataSource" destination="C50-Ue-Wbt" id="IEF-JQ-o51"/>
+                            <outlet property="delegate" destination="C50-Ue-Wbt" id="fEN-Kg-BDT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Marvel Challenge" id="Lmw-pw-Cc9">
+                        <barButtonItem key="leftBarButtonItem" title="Exit" id="cEn-oR-FHn">
+                            <connections>
+                                <action selector="closeSessionButtonTouched:" destination="C50-Ue-Wbt" id="wv6-DF-fnV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeSessionButton" destination="cEn-oR-FHn" id="M9a-9F-Yw4"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QEM-92-Op5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001.5384615384615" y="-28.436018957345969"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="iWU-wm-DA0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jyq-x0-fCc" customClass="MainNavigationController" customModule="MarvelExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="JHN-gm-NCy">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="Toolbar"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="C50-Ue-Wbt" kind="relationship" relationship="rootViewController" id="KTH-II-eIW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ue-Nv-kvh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.307692307692307" y="-28.436018957345969"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="MainBackground">
+            <color red="0.92500001192092896" green="0.93699997663497925" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryText">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryText">
+            <color red="0.13300000131130219" green="0.125" blue="0.32499998807907104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Toolbar">
+            <color red="0.14900000393390656" green="0.14900000393390656" blue="0.14900000393390656" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

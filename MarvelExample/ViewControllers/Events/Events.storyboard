@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4eO-RF-LJ9">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Marvel Challenge-->
+        <scene sceneID="BYx-v9-MHF">
+            <objects>
+                <tableViewController id="6FM-zI-QOp" customClass="EventsTableViewController" customModule="MarvelExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="7wM-d1-Rau">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="MainBackground"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventCell" id="fvo-ev-a0Q" customClass="EventTableViewCell" customModule="MarvelExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="390" height="8"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fvo-ev-a0Q" id="ANN-Rf-x9t">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="8"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x87-hO-xJL">
+                                            <rect key="frame" x="8" y="4" width="374" height="0.0"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bia-7Q-HRw" customClass="EventCellView" customModule="MarvelExample" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="0.0"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="bia-7Q-HRw" secondAttribute="bottom" id="GTO-9E-cBq"/>
+                                                <constraint firstAttribute="trailing" secondItem="bia-7Q-HRw" secondAttribute="trailing" id="ZA3-LY-Wnk"/>
+                                                <constraint firstItem="bia-7Q-HRw" firstAttribute="leading" secondItem="x87-hO-xJL" secondAttribute="leading" id="dFq-Ck-czx"/>
+                                                <constraint firstItem="bia-7Q-HRw" firstAttribute="top" secondItem="x87-hO-xJL" secondAttribute="top" id="iDD-8f-1bb"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="x87-hO-xJL" secondAttribute="trailing" constant="8" id="Bg6-r5-H0j"/>
+                                        <constraint firstItem="x87-hO-xJL" firstAttribute="top" secondItem="ANN-Rf-x9t" secondAttribute="top" constant="4" id="Izd-0K-Gew"/>
+                                        <constraint firstItem="x87-hO-xJL" firstAttribute="leading" secondItem="ANN-Rf-x9t" secondAttribute="leading" constant="8" id="YC5-8m-3Ei"/>
+                                        <constraint firstAttribute="bottom" secondItem="x87-hO-xJL" secondAttribute="bottom" constant="4" id="p6p-rt-miF"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="cardView" destination="x87-hO-xJL" id="8dp-Y2-gZf"/>
+                                    <outlet property="eventCellView" destination="bia-7Q-HRw" id="kI7-De-4Hp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6FM-zI-QOp" id="ekX-L0-qFi"/>
+                            <outlet property="delegate" destination="6FM-zI-QOp" id="uLD-wX-LG7"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Marvel Challenge" id="8ke-b2-nck">
+                        <barButtonItem key="leftBarButtonItem" title="Exit" id="GKq-aC-63k">
+                            <connections>
+                                <action selector="closeSessionButtonTouched:" destination="6FM-zI-QOp" id="PrP-o1-W0T"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="closeSessionButton" destination="GKq-aC-63k" id="OJK-kx-qrA"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fmz-yA-4EC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130.7692307692307" y="-78.199052132701425"/>
+        </scene>
+        <!--Main Navigation Controller-->
+        <scene sceneID="loP-Ox-hOw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4eO-RF-LJ9" customClass="MainNavigationController" customModule="MarvelExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AOc-LN-V3i">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6FM-zI-QOp" kind="relationship" relationship="rootViewController" id="DI3-b2-2Ey"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IQM-l8-EPc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="201.53846153846152" y="-78.199052132701425"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="MainBackground">
+            <color red="0.92500001192092896" green="0.93699997663497925" blue="0.94499999284744263" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
