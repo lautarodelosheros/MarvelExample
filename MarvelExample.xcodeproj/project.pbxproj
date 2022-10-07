@@ -29,6 +29,8 @@
 		617A6CD928EFA0C800FEBC2B /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 617A6CD228EFA0C800FEBC2B /* RobotoCondensed-LightItalic.ttf */; };
 		617A6CDA28EFA0C800FEBC2B /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 617A6CD328EFA0C800FEBC2B /* RobotoCondensed-Regular.ttf */; };
 		617A6CDD28EFA64600FEBC2B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CDC28EFA64600FEBC2B /* MainNavigationController.swift */; };
+		617A6CE128EFACA700FEBC2B /* LoadMoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 617A6CDF28EFACA700FEBC2B /* LoadMoreTableViewCell.swift */; };
+		617A6CE228EFACA700FEBC2B /* LoadMoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 617A6CE028EFACA700FEBC2B /* LoadMoreTableViewCell.xib */; };
 		61DECA7728EB689B008BE420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7628EB689B008BE420 /* AppDelegate.swift */; };
 		61DECA7928EB689B008BE420 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7828EB689B008BE420 /* SceneDelegate.swift */; };
 		61DECA7B28EB689B008BE420 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61DECA7A28EB689B008BE420 /* SplashViewController.swift */; };
@@ -96,6 +98,8 @@
 		617A6CD328EFA0C800FEBC2B /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
 		617A6CD428EFA0C800FEBC2B /* LICENSE.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		617A6CDC28EFA64600FEBC2B /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		617A6CDF28EFACA700FEBC2B /* LoadMoreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadMoreTableViewCell.swift; sourceTree = "<group>"; };
+		617A6CE028EFACA700FEBC2B /* LoadMoreTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadMoreTableViewCell.xib; sourceTree = "<group>"; };
 		61DECA7328EB689B008BE420 /* MarvelExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MarvelExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DECA7628EB689B008BE420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		61DECA7828EB689B008BE420 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,6 +212,15 @@
 			path = RobotoCondensed;
 			sourceTree = "<group>";
 		};
+		617A6CDE28EFAC8D00FEBC2B /* LoadMoreCell */ = {
+			isa = PBXGroup;
+			children = (
+				617A6CDF28EFACA700FEBC2B /* LoadMoreTableViewCell.swift */,
+				617A6CE028EFACA700FEBC2B /* LoadMoreTableViewCell.xib */,
+			);
+			path = LoadMoreCell;
+			sourceTree = "<group>";
+		};
 		61DECA6A28EB689B008BE420 = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +282,7 @@
 		61DECAA628EB6C8A008BE420 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				617A6CDE28EFAC8D00FEBC2B /* LoadMoreCell */,
 				61DECAB128EE139E008BE420 /* Characters */,
 			);
 			path = Views;
@@ -493,6 +507,7 @@
 				617A6CD928EFA0C800FEBC2B /* RobotoCondensed-LightItalic.ttf in Resources */,
 				617A6CC828EF9E3700FEBC2B /* Roboto-LightItalic.ttf in Resources */,
 				617A6CC628EF9E3700FEBC2B /* Roboto-MediumItalic.ttf in Resources */,
+				617A6CE228EFACA700FEBC2B /* LoadMoreTableViewCell.xib in Resources */,
 				617A6CC528EF9E3700FEBC2B /* Roboto-Bold.ttf in Resources */,
 				617A6CC028EF9E3700FEBC2B /* Roboto-Thin.ttf in Resources */,
 				617A6CC928EF9E3700FEBC2B /* Roboto-Light.ttf in Resources */,
@@ -650,6 +665,7 @@
 				61DECAB828EE16D7008BE420 /* MarvelEndpoints.swift in Sources */,
 				61DECA7728EB689B008BE420 /* AppDelegate.swift in Sources */,
 				61DECAAB28EB7207008BE420 /* MainTabBarController.swift in Sources */,
+				617A6CE128EFACA700FEBC2B /* LoadMoreTableViewCell.swift in Sources */,
 				61DECA7928EB689B008BE420 /* SceneDelegate.swift in Sources */,
 				61DECAB328EE13C0008BE420 /* CharacterTableViewCell.swift in Sources */,
 				61DECAC528EE22F0008BE420 /* DataProviders.swift in Sources */,
