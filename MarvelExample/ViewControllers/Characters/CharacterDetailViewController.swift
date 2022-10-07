@@ -44,6 +44,7 @@ class CharacterDetailViewController: UIViewController {
         comicsView.addSubview(comicsTableViewController.view)
         comicsTableViewController.view.frame = comicsView.bounds
         comicsTableViewController.didMove(toParent: self)
+        comicsTableViewController.delegate = self
         comicsTableViewController.showComics(for: character)
     }
     
@@ -78,5 +79,15 @@ extension CharacterDetailViewController: UIGestureRecognizerDelegate {
 
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         false
+    }
+}
+
+extension CharacterDetailViewController: ComicsTableViewControllerDelegate {
+    
+    func didUpdateContentHeight(newValue: CGFloat) {
+        comicsViewHeightConstraint.constant = newValue
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
     }
 }

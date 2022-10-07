@@ -11,8 +11,15 @@ class ComicsTableViewController: UITableViewController {
 
     private var comics = [Comic]()
     
+    weak var delegate: ComicsTableViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        delegate?.didUpdateContentHeight(newValue: tableView.contentSize.height)
     }
     
     func showComics(for character: Character) {
@@ -53,4 +60,9 @@ class ComicsTableViewController: UITableViewController {
         cell.bind(with: comic)
         return cell
     }
+}
+
+protocol ComicsTableViewControllerDelegate: AnyObject {
+    
+    func didUpdateContentHeight(newValue: CGFloat)
 }
