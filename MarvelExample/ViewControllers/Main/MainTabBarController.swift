@@ -21,14 +21,23 @@ class MainTabBarController: UITabBarController {
         let appearance = UITabBarAppearance()
         appearance.configureWithOpaqueBackground()
         appearance.backgroundColor = .white
+        let font = UIFont(name: "Roboto-Regular", size: 12) ?? UIFont.systemFont(ofSize: 12)
         let textAttributes: [NSAttributedString.Key : Any] = [
-            .font: UIFont(name: "Roboto-Regular", size: 12) ?? UIFont.systemFont(ofSize: 12),
+            .font: font,
             .foregroundColor: UIColor(named: "Toolbar") ?? .black,
             .paragraphStyle: NSParagraphStyle.default
         ]
-        appearance.inlineLayoutAppearance.normal.titleTextAttributes = textAttributes
-        appearance.stackedLayoutAppearance.normal.titleTextAttributes = textAttributes
-        appearance.compactInlineLayoutAppearance.normal.titleTextAttributes = textAttributes
+        let unselectedTextAttributes: [NSAttributedString.Key : Any] = [
+            .font: font,
+            .foregroundColor: UIColor(named: "DisabledText") ?? .gray,
+            .paragraphStyle: NSParagraphStyle.default
+        ]
+        appearance.inlineLayoutAppearance.normal.titleTextAttributes = unselectedTextAttributes
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = unselectedTextAttributes
+        appearance.compactInlineLayoutAppearance.normal.titleTextAttributes = unselectedTextAttributes
+        appearance.inlineLayoutAppearance.selected.titleTextAttributes = textAttributes
+        appearance.stackedLayoutAppearance.selected.titleTextAttributes = textAttributes
+        appearance.compactInlineLayoutAppearance.selected.titleTextAttributes = textAttributes
         tabBar.standardAppearance = appearance
         tabBar.scrollEdgeAppearance = tabBar.standardAppearance
     }
@@ -57,6 +66,7 @@ class MainTabBarController: UITabBarController {
     }
     
     private enum TabIndex: Int {
-        case characters = 0
+        case characters
+        case events
     }
 }
