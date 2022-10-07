@@ -27,14 +27,18 @@ class CharacterDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpNavigationItem()
         reloadData()
+    }
+    
+    private func setUpNavigationItem() {
+        let backButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(onBackTouched))
+        navigationItem.setLeftBarButton(backButtonItem, animated: true)
+        navigationController?.interactivePopGestureRecognizer?.delegate = self
     }
     
     private func reloadData() {
         navigationItem.title = character.name.uppercased()
-        let backButtonItem = UIBarButtonItem(image: UIImage(systemName: "xmark"), style: .plain, target: self, action: #selector(onBackTouched))
-        navigationItem.setLeftBarButton(backButtonItem, animated: true)
-        navigationController?.interactivePopGestureRecognizer?.delegate = self
         descriptionLabel.text = character.description
         setCharacterImage()
     }

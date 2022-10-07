@@ -11,7 +11,12 @@ class EventsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpTableView()
         getEvents()
+    }
+    
+    private func setUpTableView() {
+        tableView.contentInset = UIEdgeInsets(top: 9, left: 0, bottom: 9, right: 0)
     }
     
     private func getEvents() {
